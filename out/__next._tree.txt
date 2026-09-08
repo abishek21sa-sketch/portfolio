@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/1bvhj2bv2l1sa.css","style"]
+:HL["/abishek-hero.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"ruaSfsz5IM6jUEfYoihDy"}
