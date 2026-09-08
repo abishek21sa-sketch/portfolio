@@ -4,9 +4,9 @@ import { SectionShell } from "../components/SectionShell";
 
 const evidence = [
   { value: "~59M", label: "U.S. flight records modeled", origin: "Research", project: "Airline Operations Intelligence", slug: "airline-operations-intelligence", accent: "blue" },
-  { value: "106 / 106", label: "AURUM release checks passing", origin: "Independent Project", project: "AURUM", slug: "aurum", accent: "orange" },
-  { value: "18.33", label: "NASA C-MAPSS RUL RMSE in cycles", origin: "Independent Project", project: "Predictive Maintenance", slug: "predictive-maintenance", accent: "lime" },
-  { value: "1,567", label: "real SECOM fab lots used for yield analysis", origin: "Independent Project", project: "Fab Yield & Capacity", slug: "fab-yield-capacity-intelligence", accent: "white" }
+  { value: "0.619", label: "test PR-AUC for severe-crash risk", origin: "Independent Project", project: "Automotive Decision Intelligence", slug: "automotive-decision-intelligence", accent: "orange" },
+  { value: "0.402", label: "net annualized Sharpe · PSR 0.94", origin: "Independent Project", project: "Alpha Desk", slug: "alpha-desk", accent: "lime" },
+  { value: "~29%", label: "simulated cycle-time improvement from CONWIP / CR", origin: "Independent Project", project: "Fab Yield & Capacity", slug: "fab-yield-capacity-intelligence", accent: "white" }
 ];
 
 const decisionStages = [
@@ -56,7 +56,7 @@ export default function Home() {
             <div className="signal signal-4"><span>OPTIMIZE</span></div>
             <div className="signal signal-5"><span>DECIDE</span></div>
             <div className="portrait-frame">
-              <img src="/abishek-professional.jpg" alt="Abishek Singanur Aswan Kumar" />
+              <img src="/abishek-professional.jpg" alt="Abishek Singanur Aswan Kumar" width="896" height="1195" fetchPriority="high" decoding="async" />
               <div className="portrait-overlay"><span>ME / OR / AI</span><strong>BUILDING<br />BETTER SYSTEMS</strong></div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function Home() {
               return (
                 <a href="/projects/" key={label as string}>
                   <strong>{label as string}</strong>
-                  <span>{Array.from(methodSet).slice(0, 4).join(" · ") || "Project architecture in development"}</span>
+                  <span>{Array.from(methodSet).slice(0, 4).join(" · ") || "Methods listed on the project record"}</span>
                   <b>→</b>
                 </a>
               );

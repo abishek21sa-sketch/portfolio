@@ -4,6 +4,7 @@ import { researchRecords } from "../../data/research";
 export const metadata: Metadata = {
   title: "Research",
   description: "Formal research in airline operations and mechanical engineering, with independent study kept explicitly separate.",
+  alternates: { canonical: "/research/" },
 };
 
 const formalResearch = researchRecords.filter((item) => item.type !== "Independent Study");

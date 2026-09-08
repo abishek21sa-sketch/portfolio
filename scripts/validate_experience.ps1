@@ -1,14 +1,17 @@
 $ErrorActionPreference = 'Stop'
 Write-Host '=== Portfolio v3 Experience Validation ==='
 
+$arrow = [char]0x2192
+$emdash = [char]0x2014
+
 $required = @(
   'University of Illinois Urbana-Champaign',
-  'Teaching Assistant — IE 360: Facilities Planning and Design',
+  "Teaching Assistant $emdash IE 360: Facilities Planning and Design",
   'VDart',
   'Tractor and Farm Equipment Ltd. (TAFE)',
   'University of Illinois Dining',
-  '6 → 16',
-  '68.75 h → 23.4 h'
+  "6 $arrow 16",
+  "68.75 h $arrow 23.4 h"
 )
 
 $text = Get-Content -Raw -Encoding UTF8 '.\data\experience.ts'

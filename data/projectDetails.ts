@@ -20,7 +20,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     validation: ["April 2026 ingestion/analysis slice validated on 660,674 flights.", "Source-schema review retained 119 meaningful BTS columns rather than silently dropping fields.", "Current research rebuild is being re-audited before final public screenshots and claims are frozen."],
     contribution: ["Designed the public-data ingestion and normalization direction around the full BTS schema.", "Built the analytical framing for delay propagation, rotations, recovery, and network behavior.", "Kept research observations separate from future intervention or optimization claims."],
-    limitations: ["This is active research; conclusions and interface architecture can change as the study evolves.", "Public BTS data cannot expose every operational decision or proprietary airline constraint.", "The current portfolio page intentionally separates validated observations from future optimization or intervention claims."],
+    limitations: ["This is active research; conclusions and interface architecture can change as the study evolves.", "Public BTS data cannot expose every operational decision or proprietary airline constraint.", "The public summary intentionally separates validated observations from future optimization or intervention claims."],
     nextUpdates: ["Freeze the latest research architecture after repository re-audit.", "Add final charts, rotation/network visuals, and reproducible analysis outputs.", "Replace provisional research-status language with the latest study results once they are formally ready."]
   },
 
@@ -66,8 +66,8 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     validation: ["The validation engine uses purged and embargoed walk-forward evaluation rather than a single random split.", "The platform records honest negative results: the ML classifier was close to base-rate PR-AUC, PEAD was not significant, and pairs performance did not survive deflated-Sharpe/PBO scrutiny.", "The frontend is publicly reachable and serves precomputed research artifacts; it is not presented as a live recomputing trading engine.", "Execution is explicitly human-gated and the project is research software, not investment advice or autonomous trading infrastructure."],
     contribution: ["Built one validation spine so different strategies are compared under the same split, cost, and overfitting discipline.", "Connected signal research to risk and execution modeling instead of stopping at predictive metrics or gross returns.", "Made failure modes and uncertainty part of the product: negative results remain visible and are not rewritten as success."],
-    limitations: ["Several strategy outputs are backtests or simulations, not realized investment performance.", "Microstructure flow is simulated and calibrated with real volatility; it is not exchange-level order-book evidence.", "The backend serves frozen artifacts for the portfolio deployment rather than recomputing every research run live."],
-    nextUpdates: ["Add one compact performance-versus-validation visual to the project page.", "Show the shared validation spine across one positive and one negative strategy result.", "Keep the paper-execution boundary explicit as the research artifacts are refreshed."]
+    limitations: ["Several strategy outputs are backtests or simulations, not realized investment performance.", "Microstructure flow is simulated and calibrated with real volatility; it is not exchange-level order-book evidence.", "The backend serves frozen artifacts for the public deployment rather than recomputing every research run live."],
+    nextUpdates: ["Add one compact performance-versus-validation visual to the project record.", "Show the shared validation spine across one positive and one negative strategy result.", "Keep the paper-execution boundary explicit as the research artifacts are refreshed."]
   },
 
   "dual-mode-four-jaw-lathe-chuck": {
@@ -83,23 +83,23 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     evidence: [{ value: "Published", label: "Production Engineering · Springer", confidence: "Verified" }],
     contribution: ["Developed the dual-mode mechanism concept to combine self-centering convenience with independent jaw control.", "Supported the analytical, CAD, stress, deformation, and modal-evaluation path.", "Carried the design through peer-reviewed Production Engineering publication."],
     publication: { venue: "Production Engineering · Springer", year: "2026", doi: "10.1007/s11740-025-01376-5" },
-    limitations: ["Portfolio coverage focuses on the published engineering contribution rather than reproducing the full paper.", "Only claims supported by the publication and project records should be surfaced publicly."],
+    limitations: ["The public summary focuses on the published engineering contribution rather than reproducing the full paper.", "Only claims supported by the publication and project records should be surfaced publicly."],
     nextUpdates: ["Add publication figures/CAD/FEA visuals that can be shown publicly.", "Add a concise contribution breakdown and selected analytical equations from the published work."]
   },
 
   "virtual-ed-independent-study": {
     intro: "The formal UIUC independent study focused on Virtual ED / emergency-care operations.",
-    context: "This page is intentionally conservative while the study is active. The public narrative will be populated from the introduction, study protocol, IRB materials, analysis, and the user's documented contribution—not from assumptions about healthcare operations.",
+    context: "This page is intentionally conservative while the study is active. The public account is limited to protocol-approved context and completed analysis, not assumptions about healthcare operations.",
     approach: [
       { title: "Study context", description: "Establish the Virtual ED setting and the operational/research question from the approved study materials." },
       { title: "Protocol", description: "Translate the study protocol and IRB-approved scope into the analytical plan." },
       { title: "Analysis", description: "Add data definitions, methods, and findings only as the independent study work is completed." },
-      { title: "Contribution", description: "Make the user's specific academic contribution explicit rather than implying ownership of the whole study." }
+      { title: "Contribution", description: "State the specific academic contribution without implying ownership of the whole study." }
     ],
     architecture: ["study materials", "protocol / IRB scope", "data + definitions", "analysis", "findings", "academic outputs"],
-    contribution: ["The user's exact study contribution is intentionally kept update-ready until the approved study materials and completed analysis are documented.", "No adjacent healthcare-project result is attributed to the study.", "IRB-sensitive material remains outside the public portfolio."],
-    limitations: ["Active study: no unverified findings are presented.", "IRB-sensitive or non-public information will not be published.", "Methods and results remain update-ready until the actual analysis is completed."],
-    nextUpdates: ["Populate the exact study question and public-safe protocol summary.", "Add the user's specific contribution and analysis workflow.", "Add findings only after they are supported by the completed study work."]
+    contribution: ["The specific study contribution will be stated from approved study materials and completed analysis.", "No adjacent healthcare-project result is attributed to the study.", "IRB-sensitive material remains outside the public site."],
+    limitations: ["Active study: no unverified findings are presented.", "IRB-sensitive or non-public information will not be published.", "Methods and results remain limited until the actual analysis is completed."],
+    nextUpdates: ["State the exact study question and public-safe protocol summary.", "Clarify the specific contribution and analysis workflow from approved study materials.", "Add findings only after they are supported by the completed study work."]
   },
 
   "rehab-ai": {
@@ -117,12 +117,12 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "V0.95", label: "full rehabilitation intelligence platform", confidence: "Reported" },
       { value: "8", label: "integrated product workspaces", confidence: "Reported" },
       { value: "APACE", label: "risk-sensitive adaptive search algorithm", confidence: "Reported" },
-      { value: "64", label: "tests in the product registry", confidence: "Verified" }
+      { value: "64", label: "validation cases for adaptive search", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed across the product's registered workspaces.", "Biomechanics, latent-state estimation, treatment-response modeling, and APACE search are tested on synthetic/reference cases.", "The platform includes an exact small-instance oracle for the adaptive search logic; external clinical validation remains pending and clinician review is required."],
+    validation: ["Biomechanics, latent-state estimation, treatment-response modeling, and APACE search are tested on synthetic/reference cases.", "The platform includes an exact small-instance oracle for the adaptive search logic; external clinical validation remains pending and clinician review is required."],
     contribution: ["Integrated movement evidence, biomechanics, latent-state estimation, response modeling, and adaptive search into one workflow.", "Designed the APACE dual-control framing so intervention value includes both recovery and information gain.", "Added clinician-review and safety-envelope boundaries to keep the system decision-support oriented."],
     limitations: ["Synthetic patient scenarios do not establish clinical efficacy.", "The platform is not clinically validated and must not be used for autonomous care.", "External rehabilitation data, device validation, and clinician workflow validation remain open."],
-    nextUpdates: ["Add public-safe movement visualizations and a reproducible benchmark summary.", "Document the user's specific research contribution.", "Keep clinical claims gated on external validation and clinician review."]
+    nextUpdates: ["Add public-safe movement visualizations and a reproducible benchmark summary.", "Clarify the specific research contribution from approved study materials.", "Keep clinical claims gated on external validation and clinician review."]
   },
 
   "volterra-ev-charging": {
@@ -161,7 +161,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["vehicle physics kernel", "mixed-variable design space", "NSGA-II Pareto search", "Monte Carlo robust design", "GP / RF surrogates", "active-learning loop"],
     evidence: [
-      { value: "Phase 10", label: "benchmark, stress-test, and acceptance release", confidence: "Reported" },
+      { value: "Phase 10", label: "benchmark and stress-test milestone", confidence: "Reported" },
       { value: "4", label: "core vehicle objectives compared", confidence: "Reported" },
       { value: "3", label: "service layers: Python, Rust, SvelteKit", confidence: "Reported" },
       { value: "232", label: "Python tests in the Phase 10 suite", confidence: "Reported" },
@@ -170,7 +170,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     validation: ["The physics, design, Pareto, robustness, surrogate, active-learning, agent, and platform phases are implemented in the repository.", "Boundary-corner, memory-pressure, concurrency, clean-environment, and container checks are part of the Phase 10 release.", "Results are physics-model evidence, not certification of a manufactured vehicle."],
     contribution: ["Built the shared vehicle and battery evaluation kernel used by design search, robustness, and surrogate workflows.", "Connected mixed-variable NSGA-II search to chance-constrained Monte Carlo evaluation.", "Carried the engineering model through Python, Rust orchestration, and SvelteKit platform acceptance."],
     limitations: ["The design space and uncertainty distributions are documented engineering assumptions.", "No physical vehicle test or regulatory certification is claimed.", "Production deployment and validation against a real vehicle program remain outside the current evidence."],
-    nextUpdates: ["Add one Pareto-front visualization and a representative architecture comparison.", "Show how the uncertainty model changes feasible design choices.", "Document the user's engineering contribution across the scientific core and workstation."]
+    nextUpdates: ["Add one Pareto-front visualization and a representative architecture comparison.", "Show how the uncertainty model changes feasible design choices.", "Clarify the engineering contribution across the scientific core and workstation."]
   },
 
   "fab-yield-capacity-intelligence": {
@@ -194,7 +194,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     validation: ["The repository documents 30 tests covering deterministic math, optimizer behavior, and FastAPI integration.", "The application exposes four live what-if scenarios over the yield, capacity, simulation, and optimization pipeline.", "The yield score is reported on real SECOM data; the cycle-time improvement is a modeled simulation result on the published fab benchmark, not a realized plant outcome.", "The current evidence boundary distinguishes real public data, published benchmark data, modeled simulation, and optimization results."],
     contribution: ["Joined a real semiconductor yield dataset to a published re-entrant fab benchmark instead of treating yield and capacity as separate analyses.", "Implemented the yield-risk, bottleneck, dispatch-policy, simulation, and lot-release decision path.", "Made the real-data, benchmark, simulated, and optimization boundaries visible in the product narrative."],
     limitations: ["The SMT2020 fab is a published academic benchmark, not a named company's proprietary fab.", "The simulation uses modeled operating policies and a fixed horizon; it is not a realized production result.", "Site-specific MES, tool, and operator validation remain pending."],
-    nextUpdates: ["Add a compact bottleneck-to-release-decision visualization.", "Show one policy comparison with explicit modeled/simulated labels.", "Document the user's strongest contribution to the yield and capacity pipeline."]
+    nextUpdates: ["Add a compact bottleneck-to-release-decision visualization.", "Show one policy comparison with explicit modeled/simulated labels.", "Clarify the strongest contribution to the yield and capacity pipeline."]
   },
 
   "minco": {
@@ -214,12 +214,12 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "MAE 1.915", label: "blocked-arrival forecast error", confidence: "Reported" },
       { value: "80.7%", label: "regime-classifier accuracy", confidence: "Reported" },
       { value: "4 / 5", label: "evaluation scenarios where robust policy improved unsafe excess", confidence: "Reported" },
-      { value: "63", label: "tests in the current product registry", confidence: "Verified" }
+      { value: "63", label: "validation tests in the software workflow", confidence: "Verified" }
     ],
-    validation: ["Headline forecasting/classification/robust-policy results are documented from the project benchmark.", "The current final local acceptance gate passed, with the registered product suite completing successfully.", "The reference network and synthetic benchmark remain explicit; this is operations research software, not a clinical deployment."],
+    validation: ["Headline forecasting/classification/robust-policy results are documented from the project benchmark.", "The reference network and synthetic benchmark remain explicit; this is operations research software, not a clinical deployment."],
     contribution: ["Designed the hospital-flow representation across forecasting, regime detection, simulation, and capacity decisions.", "Connected forecast uncertainty to robust policy selection rather than presenting prediction as the final output.", "Built the scenario/evaluation framing and kept the synthetic reference-network boundary explicit."],
-    limitations: ["Independent engineering project, not a clinical deployment or clinical decision system.", "Data provenance and the real-vs-synthetic mix must remain explicit on the final page.", "No claim of prospective clinical validation is made."],
-    nextUpdates: ["Re-run the current repository and reproduce headline metrics.", "Add final architecture and scenario screenshots.", "Document current data provenance and Claude model-routing implementation once validated."]
+    limitations: ["Independent engineering project, not a clinical deployment or clinical decision system.", "Data provenance and the real-vs-synthetic mix must remain explicit in the public record.", "No claim of prospective clinical validation is made."],
+    nextUpdates: ["Reproduce headline metrics from the current implementation.", "Add final architecture and scenario screenshots.", "Document current data provenance and model-routing implementation once validated."]
   },
 
   "supply-chain-vulnerability": {
@@ -239,12 +239,12 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "500", label: "correlated-disruption scenarios", confidence: "Verified" },
       { value: "~64%", label: "reduction in worst-case tail risk versus probability-only visibility", confidence: "Reported" },
       { value: "8 / 8", label: "control-tower evidence checks passing", confidence: "Verified" },
-      { value: "100%", label: "final local acceptance coverage", confidence: "Verified" }
+      { value: "100%", label: "reference-scenario validation gate", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed, including the control-tower evidence checks.", "Fragility-aware Gurobi MILP results are available and the portfolio records the reported tail-risk comparison.", "The network remains a reference/scenario environment; no enterprise supplier graph or realized savings claim is made."],
+    validation: ["Fragility-aware Gurobi MILP results are available and the recorded analysis compares tail risk under alternative visibility assumptions.", "The network remains a reference/scenario environment; no enterprise supplier graph or realized savings claim is made."],
     contribution: ["Modeled suppliers, components, plants, and relationships as a disruption-aware network.", "Implemented correlated stress scenarios and fragility measures for single-point-of-failure visibility.", "Translated the stress results into a constrained Gurobi sourcing recommendation."],
-    limitations: ["The network is a portfolio modeling environment, not a proprietary enterprise supplier graph.", "Scenario probabilities and correlations must be interpreted as modeling assumptions unless tied to external data."],
-    nextUpdates: ["Re-run the final repository against real/public data inputs where available.", "Add network visualization and mathematical formulation.", "Publish clean acceptance/reproducibility commands and updated screenshots."]
+    limitations: ["The network is a reference modeling environment, not a proprietary enterprise supplier graph.", "Scenario probabilities and correlations must be interpreted as modeling assumptions unless tied to external data."],
+    nextUpdates: ["Re-run the model against real/public data inputs where available.", "Add network visualization and mathematical formulation.", "Add updated screenshots and a concise reproducibility note."]
   },
 
   "circular-manufacturing": {
@@ -265,10 +265,10 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "120,000", label: "synthetic enterprise benchmark rows", confidence: "Reported" },
       { value: "EPA GHGRP 2023", label: "public facility extract included", confidence: "Reported" }
     ],
-    validation: ["The current final local acceptance gate passed across the product workflow.", "Gurobi reported an optimal multi-objective solution with zero MIP gap.", "Service/shortage tolerances were explicitly checked; the enterprise-scale benchmark is synthetic and the public facility extract is kept separate from modeled results."],
-    contribution: ["Formulated the circular material-flow, recovery, service, carbon, and cost trade-offs as a multi-objective MILP.", "Built the acceptance path around solver status, gap, feasibility, tolerances, and objective outputs.", "Kept synthetic enterprise scenarios separate from the public EPA facility extract."],
+    validation: ["Gurobi produced an optimal multi-objective solution with zero MIP gap.", "Service/shortage tolerances were explicitly checked; the enterprise-scale benchmark is synthetic and the public facility extract is kept separate from modeled results."],
+    contribution: ["Formulated the circular material-flow, recovery, service, carbon, and cost trade-offs as a multi-objective MILP.", "Built the solver-validation path around status, gap, feasibility, tolerances, and objective outputs.", "Kept synthetic enterprise scenarios separate from the public EPA facility extract."],
     limitations: ["Final launch should explain the realism and provenance of the material-flow inputs.", "The validated scenario is evidence of model correctness under that configuration, not a universal industrial benchmark."],
-    nextUpdates: ["Add the strongest current UI screenshots.", "Add a compact formulation and objective-trade-off visualization.", "Refresh results if the latest repository changes model assumptions or data." ]
+    nextUpdates: ["Add the strongest available UI screenshots.", "Add a compact formulation and objective-trade-off visualization.", "Refresh results if new data or assumptions change the model." ]
   },
 
   "manufacturing-digital-twin": {
@@ -287,10 +287,10 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "FT06", label: "public OR-Library job-shop benchmark included", confidence: "Reported" },
       { value: "4", label: "AI tasks: risk, cycle time, bottleneck, anomaly", confidence: "Reported" }
     ],
-    validation: ["The current final local acceptance gate passed for the product runtime and engineering checks.", "The V1 workflow exercises event reconstruction, simulation, bottleneck/lateness analysis, and optimization against synthetic operational scenarios and the public FT06 benchmark.", "Digital-twin evidence is benchmark/synthetic validation; external plant shadow validation remains pending."],
+    validation: ["The V1 workflow exercises event reconstruction, simulation, bottleneck/lateness analysis, and optimization against synthetic operational scenarios and the public FT06 benchmark.", "Digital-twin evidence is benchmark/synthetic validation; external plant shadow validation remains pending."],
     contribution: ["Designed the event-to-state reconstruction layer for jobs, resources, queues, and operational flow.", "Connected synthetic scenario replay and the FT06 benchmark to bottleneck, lateness, and intervention analysis.", "Carried the twin beyond a dashboard into simulation and decision evaluation."],
     limitations: ["The 150,000-scenario workload is synthetic and does not establish a deployed-factory result.", "Digital-twin fidelity depends on the quality and completeness of event/state inputs.", "External plant data and shadow-mode validation remain open."],
-    nextUpdates: ["Add the strongest current twin-state and bottleneck visuals.", "Freeze one intervention comparison with explicit benchmark/synthetic labels.", "Document the user's contribution across state reconstruction, simulation, and optimization."]
+    nextUpdates: ["Add the strongest twin-state and bottleneck visuals.", "Freeze one intervention comparison with explicit benchmark/synthetic labels.", "Clarify the contribution across state reconstruction, simulation, and optimization."]
   },
 
   "predictive-maintenance": {
@@ -310,10 +310,10 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "15", label: "MetroPT sensor signals", confidence: "Reported" },
       { value: "300", label: "simulations in a recorded Stress Lab run", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed for the product runtime and engineering checks.", "On NASA C-MAPSS FD001, the documented model reports 18.33-cycle RMSE versus 33.34 for the age-only baseline; this is benchmark evidence, not field accuracy.", "The real MetroPT-3 path preserves 1,516,948 observations and 15 sensor signals, but certified row-level RUL remains intentionally unclaimed."],
+    validation: ["On NASA C-MAPSS FD001, the documented model reports 18.33-cycle RMSE versus 33.34 for the age-only baseline; this is benchmark evidence, not field accuracy.", "The real MetroPT-3 path preserves 1,516,948 observations and 15 sensor signals, but certified row-level RUL remains intentionally unclaimed."],
     contribution: ["Connected benchmark RUL modeling, real telemetry integrity, stress scenarios, and capacity-constrained maintenance planning.", "Built the decision framing around intervention timing, maintenance capacity, and tail risk—not prediction alone.", "Separated benchmark performance from the real-data ingestion path and its still-open field validation."],
     limitations: ["NASA C-MAPSS is a benchmark/simulated turbofan dataset, not a deployed asset population.", "MetroPT telemetry is real, but full field-performance claims require locally acquired source acceptance and operational context.", "Maintenance recommendations remain decision support and require human reliability review."],
-    nextUpdates: ["Add the current benchmark-vs-real-data evidence split to the UI.", "Freeze one capacity-constrained intervention comparison.", "Document the user's contribution across reliability modeling, stress testing, and maintenance optimization."]
+    nextUpdates: ["Add the benchmark-versus-real-data evidence split to the UI.", "Freeze one capacity-constrained intervention comparison.", "Clarify the contribution across reliability modeling, stress testing, and maintenance optimization."]
   },
 
   "kaizen-ai": {
@@ -328,14 +328,14 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["process evidence", "statistical diagnostics", "hypothesis / causal gate", "DOE + optimization", "grounded Gemini tools", "improvement recommendation"],
     evidence: [
-      { value: "74", label: "tests in the current product registry", confidence: "Verified" },
+      { value: "74", label: "validation tests in the software workflow", confidence: "Verified" },
       { value: "64", label: "exact improvement portfolios checked against an MILP oracle", confidence: "Reported" },
       { value: "6", label: "sealed causal disturbances in the validation set", confidence: "Reported" },
-      { value: "PASS", label: "current final local acceptance gate", confidence: "Verified" }
+      { value: "PASS", label: "workflow validation gate", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed for the product workflow.", "The exact 64-portfolio nonlinear oracle is checked against a MILP formulation, and six sealed causal disturbances exercise the evidence flow.", "Grounded tool-based AI design keeps Gemini above deterministic statistics, DOE, and optimization tools rather than letting the language model replace calculations."],
+    validation: ["The exact 64-portfolio nonlinear oracle is checked against a MILP formulation, and six sealed causal disturbances exercise the evidence flow.", "Grounded tool-based AI design keeps Gemini above deterministic statistics, DOE, and optimization tools rather than letting the language model replace calculations."],
     contribution: ["Connected DMAIC, statistics, DOE, causal gates, optimization, and AI explanation into one improvement workflow.", "Built the deterministic tool/evidence boundary that keeps the AI layer from inventing calculations.", "Used oracle checks and sealed disturbances to make improvement decisions reviewable."],
-    limitations: ["The portfolio must distinguish validated software behavior from real-world process-improvement impact.", "Final page should use only quantified operational outcomes that are reproduced from current runs."],
+    limitations: ["The public record must distinguish validated software behavior from real-world process-improvement impact.", "Use only quantified operational outcomes that are reproduced from current runs."],
     nextUpdates: ["Re-run latest release and capture current test/diagnostic totals.", "Add concise screenshots of the investigation workflow.", "Strengthen the page with the latest IE/OR mathematics added after the validated baseline."]
   },
 
@@ -353,13 +353,13 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "5", label: "constrained optimization approaches", confidence: "Verified" },
       { value: "3", label: "HMM market regimes", confidence: "Verified" },
       { value: "10,000", label: "Monte Carlo paths in the digital twin", confidence: "Verified" },
-      { value: "106 / 106", label: "release checks passing", confidence: "Verified" },
+      { value: "106 / 106", label: "verification checks passing", confidence: "Verified" },
       { value: "1,260", label: "public market rows in the evidence bundle", confidence: "Reported" },
       { value: "99.55%", label: "AI-live contract coverage in validation", confidence: "Reported" }
     ],
-    validation: ["The current final local acceptance gate passed; the release evidence bundle records 106/106 checks and six public evidence sources.", "The public-data bundle contains 1,260 market rows with chronological return/volatility/drawdown and no-lookahead checks.", "AI-live validation reports 99.55% contract coverage while external live connectors remain disabled."],
+    validation: ["The evidence bundle records 106/106 checks and six public evidence sources.", "The public-data bundle contains 1,260 market rows with chronological return/volatility/drawdown and no-lookahead checks.", "AI-live validation reports 99.55% contract coverage while external live connectors remain disabled."],
     contribution: ["Implemented the research loop across public-data evidence, regime modeling, constrained optimization, and tail-risk simulation.", "Connected multiple portfolio formulations to a common reviewable risk workflow.", "Kept human gating, no-lookahead checks, and research-only promotion boundaries explicit."],
-    limitations: ["Research platform, not investment advice or a production trading system.", "Walk-forward promotion is explicitly research-only and the production gate remains blocked without immutable image/deployment controls.", "Portfolio framing should keep the project as method diversity rather than the center of the IE identity."],
+    limitations: ["Research platform, not investment advice or a production trading system.", "Walk-forward promotion is explicitly research-only and the production gate remains blocked without immutable image/deployment controls.", "Position the project as method diversity rather than the center of the industrial-engineering identity."],
     nextUpdates: ["Add the current risk/optimizer evidence bundle and one regime-aware allocation comparison.", "Show the human-gated review loop in the interface.", "Keep any future performance language tied to reproducible public-data runs."]
   },
 
@@ -375,11 +375,11 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["quality data gateway", "MSA + capability", "SPC diagnostics", "DOE + PFMEA", "defect prediction", "quality decision evidence"],
     evidence: [
-      { value: "59", label: "tests in the current product registry", confidence: "Verified" },
-      { value: "100%", label: "final local acceptance coverage", confidence: "Verified" },
-      { value: "PASS", label: "current Windows final acceptance gate", confidence: "Verified" }
+      { value: "59", label: "validation tests in the software workflow", confidence: "Verified" },
+      { value: "100%", label: "workflow validation gate", confidence: "Verified" },
+      { value: "PASS", label: "Windows workflow validation", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed for the product workflow.", "The registered tests cover deterministic quality calculations, product behavior, and the evidence/decision path.", "The acceptance result validates the software workflow; it does not claim a realized defect reduction at a named plant."],
+    validation: ["The quality workflow covers deterministic calculations, product behavior, and the evidence/decision path.", "The software evidence does not claim a realized defect reduction at a named plant."],
     contribution: ["Built the evidence-first quality workflow across MSA, capability, SPC, DOE, PFMEA, and defect analysis.", "Connected deterministic quality calculations to the product decision path.", "Kept plant impact and AI assistance subordinate to approved data and human review."],
     limitations: ["Quality impact is not presented as a production KPI improvement without an approved plant dataset and before/after study.", "Model thresholds and process limits require domain calibration.", "AI assistance remains subordinate to deterministic quality calculations and human review."],
     nextUpdates: ["Add one end-to-end capability/SPC/defect investigation screenshot.", "Show the evidence chain from measurement validation to recommended experiment.", "Attach a safe benchmark dataset and freeze the headline quality metrics."]
@@ -397,11 +397,11 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["experiment ledger", "DOE candidate generation", "surrogate + uncertainty", "safe acquisition", "robust recipe optimization", "qualification / evidence gate"],
     evidence: [
-      { value: "61", label: "tests in the current product registry", confidence: "Verified" },
+      { value: "61", label: "validation tests in the software workflow", confidence: "Verified" },
       { value: "D2", label: "interactive process-development release", confidence: "Reported" },
-      { value: "100%", label: "final local acceptance coverage", confidence: "Verified" }
+      { value: "100%", label: "workflow validation gate", confidence: "Verified" }
     ],
-    validation: ["The current final local acceptance gate passed for the product workflow.", "The registered tests cover experiment design, surrogate/uncertainty behavior, optimization, readiness gates, and product integration.", "The workbench is ready for controlled shadow use; physical machine write-back and external AM Bench validation remain pending."],
+    validation: ["The workflow covers experiment design, surrogate/uncertainty behavior, optimization, readiness gates, and product integration.", "The workbench is ready for controlled shadow use; physical machine write-back and external AM Bench validation remain pending."],
     contribution: ["Built the experiment-to-surrogate-to-recipe workflow with safe acquisition and qualification gates.", "Connected DOE, uncertainty, conformal bounds, robust optimization, and active experimentation into one workbench.", "Kept machine write-back blocked until the recommendation is qualified by a process owner."],
     limitations: ["The current results establish the software and benchmark workflow, not a realized physical-process improvement.", "Synthetic additive-manufacturing data and external benchmark validation must remain labeled separately.", "Recommendations require a qualified process owner before experimentation."],
     nextUpdates: ["Add one uncertainty-aware acquisition plot and recipe comparison.", "Show the qualification gate/evidence ledger in the interface.", "Validate a benchmark or approved process dataset before making outcome claims."]
@@ -418,15 +418,15 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["wafer routes", "tool groups + stochastic times", "SimPy DES", "dispatching policy", "queue / utilization metrics", "experiment comparison"],
     evidence: [
-      { value: "V7.1", label: "flagship fab-operations acceptance release", confidence: "Reported" },
-      { value: "92", label: "tests in the current product registry", confidence: "Verified" },
-      { value: "100%", label: "final local acceptance coverage", confidence: "Verified" },
+      { value: "V7.1", label: "fab-operations platform milestone", confidence: "Reported" },
+      { value: "92", label: "validation tests in the software workflow", confidence: "Verified" },
+      { value: "100%", label: "workflow validation gate", confidence: "Verified" },
       { value: "17", label: "operator workspaces in the documented platform", confidence: "Reported" }
     ],
-    validation: ["The current final local acceptance gate passed for the fab-operations stack.", "V7.1 records canonical events, synthetic MES replay, deterministic state reconstruction, wafer genealogy, equipment digital threads, SPC, simulation/optimization, recovery, REST, persistence, and operator-console workflows.", "The evidence is synthetic/reference validation; live-fab calibration and deployment remain pending."],
-    contribution: ["Built the coupled fab state, genealogy, equipment-thread, SPC, simulation, and recovery architecture.", "Connected canonical events and synthetic MES replay to operational decisions rather than isolated analytics.", "Carried the platform through persistence, REST, and operator-console acceptance while keeping live-fab claims gated."],
+    validation: ["V7.1 records canonical events, synthetic MES replay, deterministic state reconstruction, wafer genealogy, equipment digital threads, SPC, simulation/optimization, recovery, REST, persistence, and operator-console workflows.", "The evidence is synthetic/reference validation; live-fab calibration and deployment remain pending."],
+    contribution: ["Built the coupled fab state, genealogy, equipment-thread, SPC, simulation, and recovery architecture.", "Connected canonical events and synthetic MES replay to operational decisions rather than isolated analytics.", "Carried the platform through persistence, REST, and operator-console workflow integration while keeping live-fab claims gated."],
     limitations: ["The current model is not a calibrated copy of a proprietary semiconductor line.", "Synthetic MES replay and modeled policy results do not establish a realized fab KPI improvement.", "Site-specific data, controls, and operator validation remain open."],
-    nextUpdates: ["Add a concise event-to-decision architecture visual.", "Show one dispatch/recovery comparison with explicit simulation labels.", "Document the user's contribution across the fab twin, optimization, and operator workflow."]
+    nextUpdates: ["Add a concise event-to-decision architecture visual.", "Show one dispatch/recovery comparison with explicit simulation labels.", "Clarify the contribution across the fab twin, optimization, and operator workflow."]
   },
 
   "tafe-casting-optimization": {
@@ -441,11 +441,11 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     evidence: [
       { value: "6 → 16", label: "components per mould", confidence: "Reported" },
-      { value: "68.75 h → 23.4 h", label: "reported mould-preparation requirement", confidence: "Reported" },
-      { value: "15.48 → 5.81", label: "reported sand-to-metal ratio", confidence: "Reported" }
+      { value: "68.75 h → 23.4 h", label: "mould-preparation requirement", confidence: "Reported" },
+      { value: "15.48 → 5.81", label: "sand-to-metal ratio", confidence: "Reported" }
     ],
     contribution: ["Analyzed the production/casting constraints and alternative mould configurations.", "Translated quantitative comparison into an engineering redesign recommendation.", "Worked with real industrial production context rather than a synthetic case."],
-    limitations: ["Public portfolio presentation will avoid proprietary TAFE data or drawings.", "Reported internship metrics are presented as historical project outcomes rather than newly reproduced software results."],
+    limitations: ["Use only non-proprietary TAFE data or drawings.", "Internship metrics are historical project outcomes rather than newly reproduced software results."],
     nextUpdates: ["Add a clean process/mould diagram that does not expose proprietary information.", "Confirm which supporting charts or calculations can be published." ]
   },
 
@@ -462,7 +462,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     evidence: [{ value: "99", label: "emails in one documented operating snapshot", confidence: "Reported" }],
     contribution: ["Built structured-data/backend components for the recruitment workflow.", "Implemented classification/validation logic around semi-structured operational information.", "Kept the public portfolio sanitized around company data."],
     limitations: ["Company/private message content is not published.", "Repository availability and exact data volumes may remain private or sanitized."],
-    nextUpdates: ["Refresh the page from the latest internship build.", "Add sanitized architecture and dashboard screenshots.", "Use only metrics that are approved and safe to disclose." ]
+    nextUpdates: ["Add the latest approved internship-build details.", "Add sanitized architecture and dashboard screenshots.", "Use only metrics that are approved and safe to disclose." ]
   },
 
   "solver-based-classification": {
@@ -475,8 +475,8 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["training data", "LP formulation", "direct Gurobi solve", "Benders master + subproblem", "convergence", "classification output"],
     evidence: [
-      { value: "87.5%", label: "reported training accuracy", confidence: "Reported" },
-      { value: "19", label: "reported Benders master iterations to convergence", confidence: "Reported" }
+      { value: "87.5%", label: "training accuracy", confidence: "Reported" },
+      { value: "19", label: "Benders master iterations to convergence", confidence: "Reported" }
     ],
     contribution: ["Formulated L1-regularized hinge-loss classification as a linear program.", "Implemented the monolithic Gurobi formulation and the Benders master/subproblem comparison.", "Used convergence and accuracy as separate checks rather than treating one score as the whole result."],
     limitations: ["Course project scope; the purpose is to demonstrate optimization formulation/decomposition rather than compete with production ML classifiers."],
@@ -493,7 +493,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["weld-quality data", "normalization", "KNN / LDA / QDA", "cross-validation", "confusion/error analysis", "model comparison"],
     contribution: ["Prepared the weld-quality features for comparable statistical classifiers.", "Compared KNN, LDA, and QDA through cross-validation and error analysis.", "Interpreted feature sensitivity and model behavior within the course scope."],
-    limitations: ["Exact course, dataset, and final metrics should be refreshed from the original UIUC source files before launch."],
+    limitations: ["Exact course, dataset, and final metrics should be refreshed from the original UIUC source files before public release."],
     nextUpdates: ["Recover final notebook/report and freeze model metrics.", "Add the exact UIUC course context and one concise comparison visualization." ]
   },
 
@@ -502,7 +502,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     context: "The project is kept in the academic/course section rather than presented as industry deployment.",
     architecture: ["operational inputs", "cost / resource model", "scenario assumptions", "optimization / comparison", "operational savings estimate"],
     contribution: ["Structured the ship-operations problem around cost, fuel, routing, weather, maintenance, and resource trade-offs.", "Compared operational alternatives within the course modeling scope.", "Kept any savings language tied to the source analysis rather than presenting it as fleet impact."],
-    limitations: ["Exact source data, formulation, and reported savings need to be rechecked against the original IIT Madras project files before final public launch."],
+    limitations: ["Exact source data, formulation, and savings figure are not included in the current public record."],
     nextUpdates: ["Recover the original project artifacts.", "Replace broad method labels with the exact implemented optimization/modeling approach.", "Verify any savings figure before featuring it prominently." ]
   },
 
@@ -539,11 +539,11 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["machining process", "MEMS sensing", "chatter detection", "feedback control", "MR-fluid tool holder", "vibration / surface validation"],
     evidence: [
-      { value: ">16g → ~8g", label: "reported vibration reduction in testing", confidence: "Reported" },
-      { value: "~1.5 μm → ~0.5 μm", label: "reported surface-waviness improvement", confidence: "Reported" }
+      { value: ">16g → ~8g", label: "vibration reduction in testing", confidence: "Reported" },
+      { value: "~1.5 μm → ~0.5 μm", label: "surface-waviness improvement", confidence: "Reported" }
     ],
-    contribution: ["Developed the vibration/chatter framing around SDOF dynamics and stability-lobe behavior.", "Integrated MEMS sensing, MR-fluid damping, feedback logic, and classification into the prototype direction.", "Compared vibration and surface-quality behavior across the reported test conditions."],
-    limitations: ["Portfolio results are reported from the undergraduate project record; final page should add the original experimental plots/photos before launch."],
+    contribution: ["Developed the vibration/chatter framing around SDOF dynamics and stability-lobe behavior.", "Integrated MEMS sensing, MR-fluid damping, feedback logic, and classification into the prototype direction.", "Compared vibration and surface-quality behavior across the recorded test conditions."],
+    limitations: ["Results come from the undergraduate project record; original experimental plots and photos are not included in the current public record."],
     nextUpdates: ["Add prototype photos, vibration plots, and test setup.", "Add the exact decision-tree classification evidence and experimental conditions." ]
   },
 

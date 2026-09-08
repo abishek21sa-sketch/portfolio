@@ -25,7 +25,7 @@ export const projects: ProjectRecord[] = [
     aiData: ["Public real data", "Large-scale longitudinal data", "AI-assisted querying"],
     dataProfile: { type: "Public real data", source: "U.S. DOT / BTS", scale: "~59M longitudinal flight records" },
     strongestEvidence: { value: "~59M", label: "U.S. flight records modeled", confidence: "Reported" },
-    currentState: "Active research with implemented large-scale analytical foundations; the current architecture is being consolidated and re-audited as the work evolves.",
+    currentState: "Active research platform for large-scale flight-operations analysis, with current work focused on delay propagation, aircraft rotations, and recovery patterns.",
     homepageFeatured: true,
     currentWork: true
   },
@@ -110,7 +110,7 @@ export const projects: ProjectRecord[] = [
     mathMethods: [],
     techStack: [],
     aiData: [],
-    currentState: "Active UIUC independent study. Public technical claims will be populated from the study protocol, IRB materials, analysis, and the user's documented contribution as the work progresses.",
+    currentState: "Active UIUC independent study. Public details remain intentionally limited until the approved protocol and completed analysis support a precise technical account.",
     currentWork: true
   },
   {
@@ -131,7 +131,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "FastAPI", "Optimization + simulation stack"],
     aiData: ["Forecasting", "Classification", "AI decision support", "Hybrid simulation data"],
     strongestEvidence: { value: "R² 0.839", label: "blocked-arrival forecasting", confidence: "Reported" },
-    currentState: "Core hospital-flow, forecasting, regime-detection, scenario, and decision-support workflows are implemented; latest repository-level reproducibility is still being synchronized."
+    currentState: "Core hospital-flow, forecasting, regime-detection, scenario, and decision-support workflows are implemented; reproducibility review remains ongoing."
   },
   {
     title: "Supply-Chain Vulnerability Intelligence Platform",
@@ -153,7 +153,7 @@ export const projects: ProjectRecord[] = [
     dataProfile: { type: "Scenario / network data", scale: "35 suppliers · 81 relationships · 500 disruption scenarios" },
     strongestEvidence: { value: "~64%", label: "lower worst-case tail risk", confidence: "Reported" },
     currentState: "Optimization, correlated-disruption simulation, and fragility analytics are implemented with evidence-backed scenario results.",
-    homepageFeatured: true
+    
   },
   {
     title: "Circular Manufacturing Intelligence Platform",
@@ -192,8 +192,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "Web application stack"],
     aiData: ["Simulation data", "Scenario analysis"],
     strongestEvidence: { value: "150,000", label: "synthetic operational scenarios replayed", confidence: "Reported" },
-    currentState: "Implemented V1 factory twin with recorded Windows/product-runtime acceptance; public benchmark and synthetic scenario evidence are not a claim of plant deployment.",
-    homepageFeatured: true
+    currentState: "Implemented V1 factory twin; public benchmark and synthetic scenario evidence are clearly labeled and do not imply plant deployment."
   },
   {
     title: "Predictive Maintenance Intelligence",
@@ -233,7 +232,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "Gemini", "GitHub"],
     aiData: ["Grounded LLM decision support", "Tool use"],
     strongestEvidence: { value: "64", label: "exact improvement portfolios checked against an MILP oracle", confidence: "Reported" },
-    currentState: "Validated application baseline with a current final local acceptance pass, grounded AI workflow, and explicit synthetic/causal evidence boundaries."
+    currentState: "Validated application baseline with a grounded AI workflow and explicit synthetic/causal evidence boundaries."
   },
   {
     title: "AURUM — AI-Native Quantitative Research Platform",
@@ -252,8 +251,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Convex optimization", "LP-CVaR", "Monte Carlo", "Hidden Markov models"],
     techStack: ["Python", "Streamlit", "Optimization stack"],
     aiData: ["Public financial data", "Research-memory loop", "LLM-assisted analytics"],
-    strongestEvidence: { value: "106 / 106", label: "release checks passing", confidence: "Verified" },
-    currentState: "Implemented research workstation with current final local acceptance pass, 1,260 public market rows, six public evidence sources, and production promotion intentionally blocked."
+    strongestEvidence: { value: "1,260", label: "public market rows in the evidence bundle", confidence: "Verified" },
+    currentState: "Implemented research workstation with 1,260 public market rows and six public evidence sources; production use is intentionally outside the current scope."
   },
   {
     title: "Manufacturing Quality Intelligence Platform",
@@ -270,8 +269,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Statistical quality methods"],
     techStack: ["Python", "FastAPI", "Statistical quality stack"],
     aiData: ["Defect prediction", "Evidence-grounded quality analysis"],
-    strongestEvidence: { value: "59", label: "tests in the current product registry", confidence: "Verified" },
-    currentState: "Implemented quality-engineering workbench with SPC, capability, MSA, DOE, PFMEA, defect prediction, and a current final local acceptance pass."
+    strongestEvidence: { value: "MSA + SPC", label: "quality evidence chain implemented", confidence: "Verified" },
+    currentState: "Implemented quality-engineering workbench with SPC, capability, MSA, DOE, PFMEA, defect prediction, and evidence-grounded recommendations."
   },
   {
     title: "Autonomous Process Parameter Optimization",
@@ -288,8 +287,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Bayesian optimization", "Multi-objective optimization", "Constrained optimization"],
     techStack: ["Python", "FastAPI", "SciPy", "Gurobi / HiGHS"],
     aiData: ["Gaussian-process surrogates", "Conformal uncertainty", "Active experimentation"],
-    strongestEvidence: { value: "61", label: "tests in the current product registry", confidence: "Verified" },
-    currentState: "Implemented Phase D2 process-development workbench with a current final local acceptance pass; physical machine write-back and external AM Bench validation remain blocked."
+    strongestEvidence: { value: "DOE + GP", label: "uncertainty-aware process search implemented", confidence: "Verified" },
+    currentState: "Implemented process-development workbench with DOE, uncertainty-aware surrogates, robust recipe search, and qualification gates; physical machine write-back and external benchmark validation remain outside the current evidence."
   },
   {
     title: "Semiconductor Fabrication System Simulation",
@@ -308,8 +307,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Discrete-event simulation", "Stochastic systems"],
     techStack: ["Python", "SimPy", "FastAPI", "REST"],
     aiData: ["Synthetic MES replay", "Wafer genealogy", "Reference fab events"],
-    strongestEvidence: { value: "V7.1", label: "flagship fab-operations acceptance release", confidence: "Reported" },
-    currentState: "Implemented V7.1 fab-operations intelligence stack with current final local acceptance pass, deterministic state reconstruction, genealogy, SPC, simulation, optimization, and recovery workflows; live-fab validation remains pending.",
+    strongestEvidence: { value: "SimPy DES", label: "re-entrant fab simulation with dispatch experiments", confidence: "Verified" },
+    currentState: "Implemented fab-operations intelligence stack with deterministic state reconstruction, genealogy, SPC, simulation, optimization, and recovery workflows; live-fab validation remains pending.",
     homepageFeatured: true
   },
   {
@@ -330,7 +329,7 @@ export const projects: ProjectRecord[] = [
     aiData: ["Synthetic validation", "Multimodal motion evidence", "Longitudinal patient episodes"],
     dataProfile: { type: "Synthetic / reference validation", source: "Synthetic patient twins and HDF5 motion sessions", scale: "V0.95 rehabilitation platform" },
     strongestEvidence: { value: "V0.95", label: "full rehabilitation intelligence platform", confidence: "Reported" },
-    currentState: "Implemented research-grade rehabilitation platform with current final local acceptance pass and synthetic/reference validation; external clinical validation remains pending."
+    currentState: "Implemented research-grade rehabilitation platform with synthetic/reference validation; external clinical validation remains pending."
   },
   {
     title: "VOLTERRA — EV Charging Network & Grid Decision Intelligence",
@@ -427,7 +426,7 @@ export const projects: ProjectRecord[] = [
     mathMethods: [],
     techStack: ["Python", "FastAPI", "SQLite", "MySQL"],
     aiData: ["Semi-structured real operational data", "Classification"],
-    currentState: "Active industry work with a working structured-data and backend MVP; public presentation will remain sanitized around company data."
+    currentState: "Active industry work with a working structured-data and backend MVP; public details are limited to sanitized architecture and workflow information."
   },
   {
     title: "Solver-Based Optimization for Classification",
@@ -479,7 +478,7 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Scenario-based optimization"],
     techStack: ["Data analysis stack"],
     aiData: ["Operational data"],
-    currentState: "Completed IIT Madras course project; exact implementation details will be refreshed from source materials before a public detail page is built."
+    currentState: "Completed IIT Madras course project; the public page stays concise because the source implementation record is limited."
   },
   {
     title: "Vehicle Parking Management System",
@@ -530,7 +529,7 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["SDOF dynamics", "Vibration modeling"],
     techStack: ["MEMS sensing", "Mechanical prototype", "ML analysis"],
     aiData: ["Decision-tree classification"],
-    currentState: "Completed undergraduate capstone with experimental testing and reported vibration/surface-quality improvements."
+    currentState: "Completed undergraduate capstone with experimental testing and documented vibration and surface-quality improvements."
   },
   {
     title: "Nanoscale Metrology Micrometer System",
@@ -557,18 +556,10 @@ const flagshipOrder = [
   "automotive-decision-intelligence",
   "alpha-desk",
   "semiconductor-fab-simulation",
-  "manufacturing-digital-twin",
   "predictive-maintenance",
+  "manufacturing-digital-twin",
   "supply-chain-vulnerability",
   "minco",
-  "fab-yield-capacity-intelligence",
-  "circular-manufacturing",
-  "autonomous-process-parameter-optimization",
-  "kaizen-ai",
-  "volterra-ev-charging",
-  "apex-vehicle-architecture",
-  "aurum",
-  "rehab-ai"
 ] as const;
 
 export const flagshipProjects = flagshipOrder

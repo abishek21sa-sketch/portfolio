@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>ASA</title>
+  <rect width="64" height="64" rx="12" fill="#0b0d10"/>
+  <path d="M12 45 22 19h7l10 26h-7l-2-6H20l-2 6h-6Zm10-12h6l-3-9-3 9Zm17 12 10-26h7l-10 26h-7Z" fill="#b8f23d"/>
+</svg>

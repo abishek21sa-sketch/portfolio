@@ -53,7 +53,7 @@ export default function ProjectExplorer({ projects, flagshipSlugs }: { projects:
           <b>{project.status}</b>
         </div>
         <h3>{project.shortTitle}</h3>
-        <p>{project.problem}</p>
+        <p>{project.decision || project.problem}</p>
         <div className="project-index-proof">
           {project.strongestEvidence ? (
             <><strong>{project.strongestEvidence.value}</strong><span>{project.strongestEvidence.label}</span></>
@@ -61,7 +61,7 @@ export default function ProjectExplorer({ projects, flagshipSlugs }: { projects:
             <><strong>{project.primaryDomain}</strong><span>{project.currentState}</span></>
           )}
         </div>
-        <div className="project-index-methods">{project.methods.slice(0, 4).join(" · ") || "Scope being defined"}</div>
+        <div className="project-index-methods">{project.methods.slice(0, 4).join(" · ") || "Technical details on project page"}</div>
         {project.liveLinks?.length ? <span className="project-index-live">Live frontend available</span> : null}
         {project.githubLinks?.length ? <span className="project-index-repo">GitHub code available</span> : null}
         <span className="project-open">Open project →</span>

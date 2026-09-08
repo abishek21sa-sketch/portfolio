@@ -24,12 +24,10 @@ A successful production build writes the static site to `out\`.
 
 ## Final-domain SEO pass
 
-Canonical URLs and a production sitemap are intentionally deferred until the real public URL is known. Do not publish localhost or placeholder-domain canonicals.
+Canonical URLs and a production sitemap use `https://portfolio-abisheksa.vercel.app`.
 
 At final deployment:
 
-- set the production domain;
-- add canonical URLs / sitemap using that exact domain;
-- add a final Open Graph image after the visual identity and portrait are locked;
+- verify the production domain;
 - verify the résumé link and all external profile links;
 - run Lighthouse/accessibility checks against the deployed URL.

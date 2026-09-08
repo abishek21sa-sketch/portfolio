@@ -5,7 +5,7 @@ Career-fair focused portfolio for Abishek Singanur Aswan Kumar: industrial engin
 ## What is included
 
 - Recruiter-first homepage with career focus, portrait, evidence metrics, selected work, experience, and contact actions.
-- Data-driven project explorer with 25 project records and generated project detail routes.
+- Data-driven project explorer with 28 project records and generated project detail routes.
 - Research, experience, education, and about pages retained from the portfolio content system.
 - Responsive navigation, keyboard focus states, skip navigation, reduced-motion support, and page metadata.
 - Static-export architecture for straightforward deployment.

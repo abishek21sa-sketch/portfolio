@@ -12,13 +12,13 @@ export default function ProjectSnapshot({ project, detail }: { project: ProjectR
       <div className="project-detail-inner">
         <div className="snapshot-heading">
           <div>
-            <p className="eyebrow">Visual proof</p>
+            <p className="eyebrow">Evidence & decision map</p>
             <h2>Signals that make the system real.</h2>
           </div>
-          <span>DATA + DECISION BOARD / {project.slug}</span>
+          <span>OBSERVED DATA · MODEL · DECISION</span>
         </div>
 
-        {project.screenshot ? <figure className="project-screenshot"><img src={project.screenshot.src} alt={project.screenshot.alt} /><figcaption><span>{project.screenshot.label}</span><strong>{project.screenshot.caption}</strong></figcaption></figure> : null}
+        {project.screenshot ? <figure className="project-screenshot"><img src={project.screenshot.src} alt={project.screenshot.alt} loading="lazy" decoding="async" /><figcaption><span>{project.screenshot.label}</span><strong>{project.screenshot.caption}</strong></figcaption></figure> : null}
 
         <div className="project-snapshot-board">
           <div className="snapshot-board-head">
@@ -38,7 +38,7 @@ export default function ProjectSnapshot({ project, detail }: { project: ProjectR
                 <div key={`${item.value}-${item.label}`}>
                   <strong>{item.value}</strong>
                   <span>{item.label}</span>
-                  <small>{item.confidence}</small>
+                  <small>{item.confidence === "Reported" ? "Documented" : item.confidence}</small>
                 </div>
               ))}
             </div>
@@ -56,7 +56,7 @@ export default function ProjectSnapshot({ project, detail }: { project: ProjectR
           <div className="snapshot-board-footer">
             <span>{evidenceType}</span>
             <strong>{evidenceSource}</strong>
-            <small>Portfolio evidence is labeled by confidence and kept separate from modeled or future claims.</small>
+            <small>Observed, modeled, and future claims are kept separate by evidence status.</small>
           </div>
         </div>
       </div>

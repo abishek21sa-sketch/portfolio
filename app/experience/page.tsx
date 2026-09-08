@@ -4,6 +4,7 @@ import { experiences } from "../../data/experience";
 export const metadata: Metadata = {
   title: "Experience",
   description: "Teaching, recruitment analytics and AI systems, manufacturing engineering, and operational work experience.",
+  alternates: { canonical: "/experience/" },
 };
 
 const primary = experiences.filter((experience) => experience.prominence === "primary");

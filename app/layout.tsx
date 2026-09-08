@@ -3,11 +3,13 @@ import "./globals.css";
 import { Nav } from "../components/Nav";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-abisheksa.vercel.app"),
   title: {
     default: "Abishek SA Kumar — Industrial Engineering · Operations Research · AI",
     template: "%s — Abishek SA Kumar",
   },
   description: "Industrial engineer building optimization, simulation, data, and AI systems for complex operational decisions.",
+  alternates: { canonical: "/" },
   applicationName: "Abishek SA Kumar Portfolio",
   authors: [{ name: "Abishek Singanur Aswan Kumar" }],
   creator: "Abishek Singanur Aswan Kumar",

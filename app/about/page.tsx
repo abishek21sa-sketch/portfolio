@@ -4,6 +4,7 @@ import { awards, leadership } from "../../data/profile";
 export const metadata: Metadata = {
   title: "About",
   description: "How mechanical engineering, data science, industrial engineering, operations research, and AI come together in Abishek SA Kumar’s work.",
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {

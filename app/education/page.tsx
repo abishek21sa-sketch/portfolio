@@ -4,6 +4,7 @@ import { completedCredentials, education } from "../../data/education";
 export const metadata: Metadata = {
   title: "Education",
   description: "Mechanical engineering, data science, and industrial engineering education connecting physical systems, computation, and decisions.",
+  alternates: { canonical: "/education/" },
 };
 
 export default function EducationPage() {
