@@ -195,7 +195,7 @@ export default function Home() {
           <div className="footer-links">
             <a href="mailto:as273@illinois.edu">Email ↗</a>
             <a href="https://linkedin.com/in/abishek-sa-kumar" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <a href="https://github.com/abishek21-sketch" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://github.com/abishek21sa-sketch" target="_blank" rel="noreferrer">GitHub ↗</a>
             <a href="/Abishek_Kumar_Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
           </div>
           <div className="footer-bottom"><strong>Abishek SA Kumar</strong><span>Industrial Engineering · Operations Research · AI</span></div>
