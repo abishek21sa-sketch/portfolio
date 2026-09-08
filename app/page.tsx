@@ -56,7 +56,7 @@ export default function Home() {
             <div className="signal signal-4"><span>OPTIMIZE</span></div>
             <div className="signal signal-5"><span>DECIDE</span></div>
             <div className="portrait-frame">
-              <img src="/abishek-hero.jpg" alt="Abishek Singanur Aswan Kumar" />
+              <img src="/abishek-professional.jpg" alt="Abishek Singanur Aswan Kumar" />
               <div className="portrait-overlay"><span>ME / OR / AI</span><strong>BUILDING<br />BETTER SYSTEMS</strong></div>
             </div>
           </div>

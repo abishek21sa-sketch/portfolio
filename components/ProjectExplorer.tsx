@@ -62,6 +62,7 @@ export default function ProjectExplorer({ projects, flagshipSlugs }: { projects:
           )}
         </div>
         <div className="project-index-methods">{project.methods.slice(0, 4).join(" · ") || "Scope being defined"}</div>
+        {project.liveLinks?.length ? <span className="project-index-live">Live frontend available</span> : null}
         {project.githubLinks?.length ? <span className="project-index-repo">GitHub code available</span> : null}
         <span className="project-open">Open project →</span>
       </a>

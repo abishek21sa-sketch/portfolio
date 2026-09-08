@@ -24,6 +24,52 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     nextUpdates: ["Freeze the latest research architecture after repository re-audit.", "Add final charts, rotation/network visuals, and reproducible analysis outputs.", "Replace provisional research-status language with the latest study results once they are formally ready."]
   },
 
+  "automotive-decision-intelligence": {
+    intro: "A decision-intelligence platform for automotive safety, vehicle reliability, EV infrastructure, and transportation-network risk—built from public NHTSA, FHWA, DOE, and Census data.",
+    context: "Automotive risk is rarely one problem. The platform brings together crash records, free-text complaints, vehicle-level signals, county networks, charging infrastructure, and corridor pressure while labeling measured data separately from modeled estimates.",
+    decisionQuestion: "Which safety, reliability, infrastructure, and network interventions deserve attention when real evidence and operational constraints are considered together?",
+    approach: [
+      { title: "Observe", description: "Load and validate FARS crashes, NHTSA complaints and recalls, FHWA vehicle-miles-traveled data, DOE charging stations, and public network sources." },
+      { title: "Model", description: "Build complaint clusters, calibrated crash-risk screens, vehicle-trust signals, county-network criticality, queue pressure, and complaint-progression states." },
+      { title: "Optimize", description: "Solve safety-budget and EV facility-location problems, then compare marginal coverage and network decisions under explicit constraints." },
+      { title: "Decide", description: "Expose the results through a live map and decision center, including a read-only LLM text-to-SQL assistant grounded in the warehouse and methodology." }
+    ],
+    architecture: ["NHTSA / FHWA / DOE public data", "DuckDB analytical warehouse", "NLP + predictive risk", "network + queueing models", "MILP safety / EV placement", "SvelteKit decision center"],
+    evidence: [
+      { value: "256,614", label: "FARS crashes loaded for 2018–2024", confidence: "Reported" },
+      { value: "805,882", label: "NHTSA complaint records since 2018", confidence: "Reported" },
+      { value: "89,161", label: "DOE AFDC charging stations analyzed", confidence: "Reported" },
+      { value: "0.619", label: "test PR-AUC vs 0.430 base rate for severe-crash risk", confidence: "Reported" }
+    ],
+    validation: ["The crash-risk model uses a chronological train/validation/test split with XGBoost, SHAP, and calibration; the reported test PR-AUC is 0.619 against a 0.430 base rate.", "The EV facility-location layer replaced brute-force distance checks with BallTree indexing and solves the documented sparse optimization problem in seconds.", "The live frontend is publicly reachable; the persistent FastAPI/DuckDB backend is a separate deployment because the warehouse does not fit a stateless Vercel function.", "Vehicle-level exposure normalization remains an explicit limitation because a defensible fleet-size denominator is not available in the primary public sources."],
+    contribution: ["Connected real public automotive, crash, complaint, road-network, and charging data into one operational warehouse.", "Implemented the safety, reliability, network, queueing, and EV placement lenses instead of treating the dashboard as a single model.", "Kept observed records, modeled demand, predictions, and optimization recommendations visibly separated in the methodology and interface."],
+    limitations: ["Vehicle-level complaint scores do not have a complete fleet-exposure denominator.", "Charging demand and some queueing inputs are modeled where station-level observations are not public.", "The platform is decision support; it does not certify vehicles, roads, or safety interventions."],
+    nextUpdates: ["Add one final map capture showing the strongest county, corridor, and charging-gap decisions.", "Document the most defensible intervention comparison with observed-versus-modeled labels.", "Keep the frontend link live while the backend deployment and data refresh pipeline evolve."]
+  },
+
+  "alpha-desk": {
+    intro: "A quantitative trading research, validation, risk, and execution platform built to test whether a strategy survives realistic data handling, costs, uncertainty, and out-of-sample scrutiny.",
+    context: "Alpha Desk is designed for the difficult part of systematic research: preventing look-ahead, measuring overfitting, pricing turnover, replaying stress, and reporting negative results when the evidence does not support a claim.",
+    decisionQuestion: "Which signals survive realistic validation, transaction costs, risk tests, and execution constraints?",
+    approach: [
+      { title: "Build the backbone", description: "Hash-verify real price, macro, and SEC EDGAR fundamentals data across 50 symbols, 9 macro series, and 40 tickers." },
+      { title: "Validate", description: "Run purged and embargoed walk-forward splits with probability-of-backtest-overfitting, deflated-Sharpe, and transaction-cost checks." },
+      { title: "Stress", description: "Evaluate factors, ML, pairs, momentum, PEAD, microstructure, and volatility-relative-value strategies alongside VaR/CVaR and crisis replay." },
+      { title: "Execute carefully", description: "Model market impact with Almgren–Chriss and expose a thin Alpaca paper-trading client behind human-gated controls; autonomous order submission is disabled." }
+    ],
+    architecture: ["public market / macro / SEC data", "DuckDB research warehouse", "purged walk-forward validation", "strategy research modules", "risk + execution spine", "Next.js artifact desk"],
+    evidence: [
+      { value: "518,774", label: "real daily price rows across 50 symbols", confidence: "Reported" },
+      { value: "0.402", label: "net annualized Sharpe for time-series momentum · PSR 0.94", confidence: "Reported" },
+      { value: "0.790", label: "net annualized Sharpe for SVXY relative value · PSR 0.998", confidence: "Reported" },
+      { value: "0.44", label: "deflated Sharpe for the best pairs result—indistinguishable from luck", confidence: "Reported" }
+    ],
+    validation: ["The validation engine uses purged and embargoed walk-forward evaluation rather than a single random split.", "The platform records honest negative results: the ML classifier was close to base-rate PR-AUC, PEAD was not significant, and pairs performance did not survive deflated-Sharpe/PBO scrutiny.", "The frontend is publicly reachable and serves precomputed research artifacts; it is not presented as a live recomputing trading engine.", "Execution is explicitly human-gated and the project is research software, not investment advice or autonomous trading infrastructure."],
+    contribution: ["Built one validation spine so different strategies are compared under the same split, cost, and overfitting discipline.", "Connected signal research to risk and execution modeling instead of stopping at predictive metrics or gross returns.", "Made failure modes and uncertainty part of the product: negative results remain visible and are not rewritten as success."],
+    limitations: ["Several strategy outputs are backtests or simulations, not realized investment performance.", "Microstructure flow is simulated and calibrated with real volatility; it is not exchange-level order-book evidence.", "The backend serves frozen artifacts for the portfolio deployment rather than recomputing every research run live."],
+    nextUpdates: ["Add one compact performance-versus-validation visual to the project page.", "Show the shared validation spine across one positive and one negative strategy result.", "Keep the paper-execution boundary explicit as the research artifacts are refreshed."]
+  },
+
   "dual-mode-four-jaw-lathe-chuck": {
     intro: "Published mechanical-engineering research on a dual-mode four-jaw lathe chuck designed to combine synchronized self-centering behavior with independent jaw control.",
     context: "The work bridges analytical machine-tool design and finite-element validation rather than presenting the mechanism as a CAD-only concept.",

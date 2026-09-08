@@ -35,10 +35,12 @@ export interface ProjectEvidence {
   confidence: EvidenceConfidence;
 }
 
-export interface ProjectGithubLink {
+export interface ProjectLink {
   label: string;
   url: string;
 }
+
+export type ProjectGithubLink = ProjectLink;
 
 export interface ProjectScreenshot {
   src: string;
@@ -52,6 +54,7 @@ export interface ProjectRecord {
   shortTitle: string;
   slug: string;
   githubLinks?: ProjectGithubLink[];
+  liveLinks?: ProjectLink[];
   screenshot?: ProjectScreenshot;
   origin: Origin;
   institutionOrCompany?: string;
