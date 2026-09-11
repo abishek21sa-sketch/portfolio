@@ -98,7 +98,7 @@ export default function Home() {
 
       <SectionShell eyebrow="Selected work" title={<>Different systems. Different mathematics. <em>Same decision mindset.</em></>} className="selected-work">
         <div id="selected-work" className="feature-grid">
-          {featuredWork.slice(0, 6).map((project, index) => <ProjectFeature key={project.slug} project={project} index={index} />)}
+          {featuredWork.slice(0, 5).map((project, index) => <ProjectFeature key={project.slug} project={project} index={index} />)}
         </div>
         <div className="section-action"><a className="btn btn-dark" href="/projects/">Explore all {projects.length} projects →</a></div>
       </SectionShell>

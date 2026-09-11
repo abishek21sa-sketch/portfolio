@@ -211,8 +211,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "FastAPI", "Gurobi"],
     aiData: ["ML", "Real-data ingestion", "Synthetic scenarios"],
     strongestEvidence: { value: "18.33", label: "NASA C-MAPSS RUL RMSE in cycles", confidence: "Reported" },
-    currentState: "Implemented reliability observatory with benchmark RUL modeling, real MetroPT telemetry ingestion, stress testing, and capacity-constrained maintenance planning; field validation remains pending.",
-    homepageFeatured: true
+    currentState: "Implemented reliability observatory with benchmark RUL modeling, real MetroPT telemetry ingestion, stress testing, and capacity-constrained maintenance planning; field validation remains pending."
   },
   {
     title: "KAIZEN AI",
