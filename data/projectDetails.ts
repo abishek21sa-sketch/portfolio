@@ -328,10 +328,10 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["process evidence", "statistical diagnostics", "hypothesis / causal gate", "DOE + optimization", "grounded Gemini tools", "improvement recommendation"],
     evidence: [
+      { value: "99.75%", label: "modeled first-pass yield after simulated Kaizen improvements, up from 90.64%", confidence: "Reported" },
       { value: "74", label: "validation tests in the software workflow", confidence: "Verified" },
       { value: "64", label: "exact improvement portfolios checked against an MILP oracle", confidence: "Reported" },
-      { value: "6", label: "sealed causal disturbances in the validation set", confidence: "Reported" },
-      { value: "PASS", label: "workflow validation gate", confidence: "Verified" }
+      { value: "6", label: "sealed causal disturbances in the validation set", confidence: "Reported" }
     ],
     validation: ["The exact 64-portfolio nonlinear oracle is checked against a MILP formulation, and six sealed causal disturbances exercise the evidence flow.", "Grounded tool-based AI design keeps Gemini above deterministic statistics, DOE, and optimization tools rather than letting the language model replace calculations."],
     contribution: ["Connected DMAIC, statistics, DOE, causal gates, optimization, and AI explanation into one improvement workflow.", "Built the deterministic tool/evidence boundary that keeps the AI layer from inventing calculations.", "Used oracle checks and sealed disturbances to make improvement decisions reviewable."],
@@ -375,8 +375,9 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["quality data gateway", "MSA + capability", "SPC diagnostics", "DOE + PFMEA", "defect prediction", "quality decision evidence"],
     evidence: [
+      { value: "47.6%", label: "expected quality cost reduction from a risk-based inspection policy", confidence: "Reported" },
+      { value: "0.756", label: "ROC-AUC for defect risk on a held-out process-data window", confidence: "Reported" },
       { value: "59", label: "validation tests in the software workflow", confidence: "Verified" },
-      { value: "100%", label: "workflow validation gate", confidence: "Verified" },
       { value: "PASS", label: "Windows workflow validation", confidence: "Verified" }
     ],
     validation: ["The quality workflow covers deterministic calculations, product behavior, and the evidence/decision path.", "The software evidence does not claim a realized defect reduction at a named plant."],
@@ -397,9 +398,9 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["experiment ledger", "DOE candidate generation", "surrogate + uncertainty", "safe acquisition", "robust recipe optimization", "qualification / evidence gate"],
     evidence: [
+      { value: "80%", label: "reduction in best feasible recipe-loss across a 32-trial simulated campaign", confidence: "Reported" },
       { value: "61", label: "validation tests in the software workflow", confidence: "Verified" },
-      { value: "D2", label: "interactive process-development release", confidence: "Reported" },
-      { value: "100%", label: "workflow validation gate", confidence: "Verified" }
+      { value: "D2", label: "interactive process-development release", confidence: "Reported" }
     ],
     validation: ["The workflow covers experiment design, surrogate/uncertainty behavior, optimization, readiness gates, and product integration.", "The workbench is ready for controlled shadow use; physical machine write-back and external AM Bench validation remain pending."],
     contribution: ["Built the experiment-to-surrogate-to-recipe workflow with safe acquisition and qualification gates.", "Connected DOE, uncertainty, conformal bounds, robust optimization, and active experimentation into one workbench.", "Kept machine write-back blocked until the recommendation is qualified by a process owner."],
@@ -408,25 +409,24 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
   },
 
   "semiconductor-fab-simulation": {
-    intro: "A discrete-event semiconductor fabrication model centered on re-entrant process routes, tool contention, stochastic processing, queues, and dispatching decisions.",
-    decisionQuestion: "How do dispatching and capacity policies change cycle time, congestion, tool utilization, and throughput in a re-entrant fab?",
+    intro: "A fab-operations decision-intelligence platform for wafer-lot release, dispatching, re-entrant scheduling, and queue-time risk: a discrete-event fab twin coupled to a Cox-survival queue-breach model (QSHIFT) and a CVaR-based release/dispatch optimizer (RARE-FAB).",
+    decisionQuestion: "Which lots should be released and dispatched next, and how should that decision change as queue-time and tool-failure risk shift across the fab?",
     approach: [
-      { title: "Route", description: "Represent repeated lithography, etch, deposition, metrology, and other process visits." },
-      { title: "Simulate", description: "Model stochastic processing times, queues, and shared tool groups." },
-      { title: "Dispatch", description: "Compare policies such as FIFO and SPT." },
-      { title: "Measure", description: "Track flow, congestion, bottlenecks, and throughput outcomes." }
+      { title: "Model", description: "Represent re-entrant routes, batching, reticles, PM, and stochastic tool failures in a discrete-event fab twin." },
+      { title: "Predict", description: "Score 12-hour queue-time-breach risk with QSHIFT, a Cox proportional-hazards survival model." },
+      { title: "Optimize", description: "Solve CVaR-based release and dispatch decisions (RARE-FAB) against nominal cost plus tail risk." },
+      { title: "Decide", description: "Synthesize evidence into human-gated decision packets, with autonomous execution blocked." }
     ],
-    architecture: ["wafer routes", "tool groups + stochastic times", "SimPy DES", "dispatching policy", "queue / utilization metrics", "experiment comparison"],
+    architecture: ["canonical fab event data", "re-entrant discrete-event twin", "QSHIFT queue-breach survival model", "RARE-FAB CVaR release/dispatch optimizer", "closed-loop recovery", "human-gated decision center"],
     evidence: [
-      { value: "V7.1", label: "fab-operations platform milestone", confidence: "Reported" },
-      { value: "92", label: "validation tests in the software workflow", confidence: "Verified" },
-      { value: "100%", label: "workflow validation gate", confidence: "Verified" },
-      { value: "17", label: "operator workspaces in the documented platform", confidence: "Reported" }
+      { value: "89", label: "tests in the fab-operations regression suite", confidence: "Verified" },
+      { value: "V7.2", label: "fab-operations platform milestone", confidence: "Reported" },
+      { value: "22", label: "operator workspaces in the documented platform", confidence: "Reported" }
     ],
-    validation: ["V7.1 records canonical events, synthetic MES replay, deterministic state reconstruction, wafer genealogy, equipment digital threads, SPC, simulation/optimization, recovery, REST, persistence, and operator-console workflows.", "The evidence is synthetic/reference validation; live-fab calibration and deployment remain pending."],
-    contribution: ["Built the coupled fab state, genealogy, equipment-thread, SPC, simulation, and recovery architecture.", "Connected canonical events and synthetic MES replay to operational decisions rather than isolated analytics.", "Carried the platform through persistence, REST, and operator-console workflow integration while keeping live-fab claims gated."],
+    validation: ["V7.2 records canonical events, synthetic MES replay, deterministic state reconstruction, wafer genealogy, QSHIFT queue-risk, RARE-FAB CVaR release optimization, SPC, and closed-loop recovery, passing an 89-test regression suite.", "The evidence is synthetic/reference validation; live-fab MES/SECS-GEM connectivity, site calibration, and deployment remain unclaimed."],
+    contribution: ["Built the coupled fab twin, QSHIFT queue-risk model, and RARE-FAB CVaR release/dispatch optimizer as one decision stack rather than isolated analytics.", "Connected canonical events and synthetic MES replay to release/dispatch decisions with human-gated approval.", "Verified the decision stack through an 89-test regression suite covering simulation, prediction, and optimization."],
     limitations: ["The current model is not a calibrated copy of a proprietary semiconductor line.", "Synthetic MES replay and modeled policy results do not establish a realized fab KPI improvement.", "Site-specific data, controls, and operator validation remain open."],
-    nextUpdates: ["Add a concise event-to-decision architecture visual.", "Show one dispatch/recovery comparison with explicit simulation labels.", "Clarify the contribution across the fab twin, optimization, and operator workflow."]
+    nextUpdates: ["Add a concise event-to-decision architecture visual.", "Show one QSHIFT/RARE-FAB decision walkthrough with explicit simulation labels.", "Clarify the contribution across the fab twin, optimization, and operator workflow."]
   },
 
   "tafe-casting-optimization": {

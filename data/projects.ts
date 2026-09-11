@@ -231,8 +231,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Statistical testing", "Optimization"],
     techStack: ["Python", "Gemini", "GitHub"],
     aiData: ["Grounded LLM decision support", "Tool use"],
-    strongestEvidence: { value: "64", label: "exact improvement portfolios checked against an MILP oracle", confidence: "Reported" },
-    currentState: "Validated application baseline with a grounded AI workflow and explicit synthetic/causal evidence boundaries."
+    strongestEvidence: { value: "99.75%", label: "modeled first-pass yield after simulated Kaizen improvements, up from 90.64%", confidence: "Reported" },
+    currentState: "Validated application baseline with a grounded AI workflow and explicit synthetic/causal evidence boundaries; 64 exact improvement portfolios checked against an MILP oracle."
   },
   {
     title: "AURUM — AI-Native Quantitative Research Platform",
@@ -269,8 +269,8 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Statistical quality methods"],
     techStack: ["Python", "FastAPI", "Statistical quality stack"],
     aiData: ["Defect prediction", "Evidence-grounded quality analysis"],
-    strongestEvidence: { value: "MSA + SPC", label: "quality evidence chain implemented", confidence: "Verified" },
-    currentState: "Implemented quality-engineering workbench with SPC, capability, MSA, DOE, PFMEA, defect prediction, and evidence-grounded recommendations."
+    strongestEvidence: { value: "47.6%", label: "expected quality cost reduction from a risk-based inspection policy", confidence: "Reported" },
+    currentState: "Implemented quality-engineering workbench with SPC, capability, MSA, DOE, PFMEA, defect prediction (0.756 ROC-AUC on a held-out window), and evidence-grounded recommendations."
   },
   {
     title: "Autonomous Process Parameter Optimization",
@@ -287,12 +287,12 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Bayesian optimization", "Multi-objective optimization", "Constrained optimization"],
     techStack: ["Python", "FastAPI", "SciPy", "Gurobi / HiGHS"],
     aiData: ["Gaussian-process surrogates", "Conformal uncertainty", "Active experimentation"],
-    strongestEvidence: { value: "DOE + GP", label: "uncertainty-aware process search implemented", confidence: "Verified" },
+    strongestEvidence: { value: "80%", label: "reduction in best feasible recipe-loss across a 32-trial simulated campaign", confidence: "Reported" },
     currentState: "Implemented process-development workbench with DOE, uncertainty-aware surrogates, robust recipe search, and qualification gates; physical machine write-back and external benchmark validation remain outside the current evidence."
   },
   {
-    title: "Semiconductor Fabrication System Simulation",
-    shortTitle: "Semiconductor Fab Simulation",
+    title: "Semiconductor Fab Operations Intelligence",
+    shortTitle: "Fab Operations Intelligence",
     slug: "semiconductor-fab-simulation",
     githubLinks: [{ label: "Fab operations repository", url: "https://github.com/abishek21sa-sketch/Semiconductor_Fab_Operations_Intelligence" }],
     screenshot: { src: "/images/projects/semiconductor-fab-simulation.png", alt: "FABOPS V7 mission control operator console", label: "RUNNABLE BUILD CAPTURE", caption: "Captured from the runnable FABOPS V7 build." },
@@ -300,15 +300,15 @@ export const projects: ProjectRecord[] = [
     status: "Implemented",
     primaryDomain: "Semiconductor Systems",
     secondaryDomains: ["Manufacturing Systems", "Scheduling"],
-    problem: "Re-entrant semiconductor routes create queueing, tool contention, and scheduling interactions that simple linear production assumptions miss.",
-    decision: "How do dispatching and capacity policies affect fab flow and congestion?",
-    methods: ["Discrete-event simulation", "Re-entrant flow", "Scheduling experiments", "Stochastic processing", "Fab operations control"],
-    ieConcepts: ["Production flow", "Scheduling", "Bottlenecks", "Capacity"],
-    mathMethods: ["Discrete-event simulation", "Stochastic systems"],
+    problem: "A semiconductor fab is a re-entrant, tightly coupled production system: release decisions change downstream WIP, queue-time violations can damage yield, and local dispatch choices create global cycle-time risk.",
+    decision: "Which lots should be released and dispatched next, and how should that decision adapt as queue-time and tool risk shift?",
+    methods: ["Discrete-event simulation", "Re-entrant flow", "Cox-survival queue-time risk (QSHIFT)", "CVaR release/dispatch optimization", "Scheduling experiments", "Fab operations control"],
+    ieConcepts: ["Production flow", "Scheduling", "Bottlenecks", "Capacity", "Release control"],
+    mathMethods: ["Discrete-event simulation", "Stochastic systems", "Cox proportional hazards", "CVaR optimization"],
     techStack: ["Python", "SimPy", "FastAPI", "REST"],
     aiData: ["Synthetic MES replay", "Wafer genealogy", "Reference fab events"],
-    strongestEvidence: { value: "SimPy DES", label: "re-entrant fab simulation with dispatch experiments", confidence: "Verified" },
-    currentState: "Implemented fab-operations intelligence stack with deterministic state reconstruction, genealogy, SPC, simulation, optimization, and recovery workflows; live-fab validation remains pending.",
+    strongestEvidence: { value: "89", label: "tests in the fab-operations regression suite", confidence: "Verified" },
+    currentState: "Implemented fab-operations intelligence stack with deterministic state reconstruction, genealogy, SPC, a re-entrant discrete-event twin, QSHIFT queue-time-breach risk, and CVaR-based release/dispatch optimization (RARE-FAB), verified through an 89-test regression suite; live-fab validation remains pending.",
     homepageFeatured: true
   },
   {
@@ -389,7 +389,8 @@ export const projects: ProjectRecord[] = [
     aiData: ["SECOM real fab sensor data", "SMT2020 published benchmark", "Public order-demand data"],
     dataProfile: { type: "Public real + benchmark data", source: "UCI SECOM and SMT2020 semiconductor-fab benchmark", scale: "1,567 lots · 590 sensors · 10 products" },
     strongestEvidence: { value: "1,567", label: "real SECOM fab lots used for yield analysis", confidence: "Reported" },
-    currentState: "Working FastAPI/Docker decision platform with 30 tests, four live what-if scenarios, yield modeling, fab simulation, and Gurobi release optimization; benchmark and simulation evidence are not claims of named-plant validation."
+    currentState: "Working FastAPI/Docker decision platform with 30 tests, four live what-if scenarios, yield modeling, fab simulation, and Gurobi release optimization; benchmark and simulation evidence are not claims of named-plant validation.",
+    homepageFeatured: true
   },
   {
     title: "TAFE Casting Yield & Throughput Optimization",
@@ -556,6 +557,7 @@ const flagshipOrder = [
   "automotive-decision-intelligence",
   "alpha-desk",
   "semiconductor-fab-simulation",
+  "fab-yield-capacity-intelligence",
   "predictive-maintenance",
   "manufacturing-digital-twin",
   "supply-chain-vulnerability",
