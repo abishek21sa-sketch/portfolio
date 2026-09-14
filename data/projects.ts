@@ -156,7 +156,7 @@ export const projects: ProjectRecord[] = [
     
   },
   {
-    title: "Circular Manufacturing Intelligence Platform",
+    title: "Circular Battery Manufacturing & Recovery Decision Intelligence",
     shortTitle: "Circular Manufacturing",
     slug: "circular-manufacturing",
     githubLinks: [{ label: "Circular manufacturing repository", url: "https://github.com/abishek21sa-sketch/circular_manufacuring" }],
@@ -164,15 +164,15 @@ export const projects: ProjectRecord[] = [
     status: "Validated",
     primaryDomain: "Manufacturing Systems",
     secondaryDomains: ["Sustainability", "Material Flow"],
-    problem: "Circular manufacturing decisions must balance service feasibility, cost, carbon, and material recovery across constrained flows.",
-    decision: "How should material and recovery decisions trade off cost, carbon, and service feasibility?",
-    methods: ["Multi-objective MILP", "Material-flow optimization", "Scenario analysis"],
-    ieConcepts: ["Material flow", "Sustainability", "Service constraints"],
-    mathMethods: ["MILP", "Multi-objective optimization"],
+    problem: "Closed-loop battery manufacturing must jointly decide material sourcing, remanufacturing, recycling, inventory, and recovery logistics under uncertain demand, returns, scrap, recovery quality, and material prices -- not as separate forecasting and dashboard exercises.",
+    decision: "What mix of virgin material, recovered feed, remanufacturing, recycling, inventories, collection routes, and facility capacity should be selected, with full computational ancestry from prediction through optimization?",
+    methods: ["Multi-objective MILP", "Lifecycle accounting", "Reverse logistics", "Vehicle routing", "Stochastic optimization", "Explainable decision intelligence"],
+    ieConcepts: ["Circular economy", "Material flow", "Reverse logistics", "Sustainability"],
+    mathMethods: ["MILP", "Multi-objective optimization", "Stochastic optimization", "Vehicle routing"],
     techStack: ["Python", "Gurobi"],
     aiData: ["Optimization decision support"],
-    strongestEvidence: { value: "MIP gap 0", label: "validated final optimization gate", confidence: "Verified" },
-    currentState: "Validated through the recorded Phase 10 Windows final gate with an optimal Gurobi solution and zero MIP gap."
+    strongestEvidence: { value: "160", label: "tests passing on a fresh install (V1.2.1)", confidence: "Verified" },
+    currentState: "Implemented V1.2.1 closed-loop lithium-ion battery manufacturing and recovery platform connecting predictive AI, lifecycle accounting, reverse logistics, routing, and stochastic optimization into one auditable chain; verified with a full test-suite run (160/160 passing) in a clean install. The repository's own recorded Gurobi validation reports 11/11 checks and zero reference MIP gap; reference results remain labeled synthetic validation, not observed factory/recycler performance."
   },
   {
     title: "Manufacturing Digital Twin",
@@ -326,9 +326,9 @@ export const projects: ProjectRecord[] = [
     mathMethods: ["Unscented Kalman filter", "Gaussian processes", "CVaR", "Receding-horizon optimization"],
     techStack: ["Python", "Starlette", "Vue 3", "HDF5", "NumPy / SciPy"],
     aiData: ["Synthetic validation", "Multimodal motion evidence", "Longitudinal patient episodes"],
-    dataProfile: { type: "Synthetic / reference validation", source: "Synthetic patient twins and HDF5 motion sessions", scale: "V0.95 rehabilitation platform" },
-    strongestEvidence: { value: "V0.95", label: "full rehabilitation intelligence platform", confidence: "Reported" },
-    currentState: "Implemented research-grade rehabilitation platform with synthetic/reference validation; external clinical validation remains pending."
+    dataProfile: { type: "Synthetic / reference validation", source: "Synthetic patient twins and HDF5 motion sessions", scale: "V0.99 rehabilitation platform" },
+    strongestEvidence: { value: "84/84", label: "tests passing on a fresh install (V0.99)", confidence: "Verified" },
+    currentState: "Implemented V0.99 full clinical-workflow release candidate connecting an entire rehabilitation episode -- digital patient intake, motion-capture assessment, longitudinal record, and population-level research -- rather than independent research screens; verified with a full test-suite run (84/84 passing) in a clean install. Synthetic/reference validation only; external clinical validation remains pending."
   },
   {
     title: "VOLTERRA — EV Charging Network & Grid Decision Intelligence",
@@ -348,7 +348,7 @@ export const projects: ProjectRecord[] = [
     aiData: ["Real public station data", "Public energy / weather / vehicle data", "Modeled demand"],
     dataProfile: { type: "Public real + modeled network data", source: "Tesla, NREL, FHWA, EIA, NOAA, EPA", scale: "17 real sites · 994 corridor segments · 1,189 EV variants" },
     strongestEvidence: { value: "17", label: "real charging sites analyzed", confidence: "Reported" },
-    currentState: "Implemented multi-module EV charging and grid decision platform with 442 documented module tests; station-level demand is modeled and live model-tool selection remains unverified."
+    currentState: "Implemented multi-module EV charging and grid decision platform across Julia, Python, and Go. The Go backend (15 tests) and Python ML module (34 tests) were independently re-run and pass 48 of 49 fresh, with the one failure traced to a local warehouse missing real corridor-site data rather than a confirmed code defect; the Julia optimization/simulation/routing/graph modules document roughly 261 further tests in-repo that were not independently re-run in this environment. Station-level demand is modeled and live model-tool selection remains unverified."
   },
   {
     title: "APEX — Vehicle Architecture & Engineering Optimization",

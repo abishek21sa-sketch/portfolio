@@ -104,7 +104,7 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
 
   "rehab-ai": {
     intro: "A research-grade rehabilitation decision-intelligence platform built around a patient-specific digital twin, multimodal movement evidence, and safe adaptive intervention search.",
-    context: "REHAB AI treats rehabilitation as a sequential decision problem: each intervention changes the patient's state while also revealing information about how that patient responds. All included model benchmarks and patient scenarios remain synthetic validation, not clinical efficacy evidence.",
+    context: "REHAB AI treats rehabilitation as a sequential decision problem: each intervention changes the patient's state while also revealing information about how that patient responds. V0.99 is a full clinical-workflow release candidate that connects an entire rehabilitation episode -- digital patient intake, motion-capture assessment, longitudinal record, and population-level research -- rather than independent research screens. All included model benchmarks and patient scenarios remain synthetic validation, not clinical efficacy evidence.",
     decisionQuestion: "Which safe intervention should be selected next when recovery, treatment burden, uncertainty, and information value all matter?",
     approach: [
       { title: "Reconstruct", description: "Combine IMU, pose, assessment, and session evidence into a patient-specific movement state." },
@@ -114,12 +114,12 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["IMU / pose / assessment", "biomechanics", "UKF latent state", "phenotype + GP response", "APACE dual-control search", "clinician review"],
     evidence: [
-      { value: "V0.95", label: "full rehabilitation intelligence platform", confidence: "Reported" },
+      { value: "84/84", label: "tests passing in a fresh install (V0.99)", confidence: "Verified" },
+      { value: "V0.99", label: "full clinical-workflow release candidate", confidence: "Reported" },
       { value: "8", label: "integrated product workspaces", confidence: "Reported" },
-      { value: "APACE", label: "risk-sensitive adaptive search algorithm", confidence: "Reported" },
-      { value: "64", label: "validation cases for adaptive search", confidence: "Verified" }
+      { value: "64", label: "validation cases for adaptive search", confidence: "Reported" }
     ],
-    validation: ["Biomechanics, latent-state estimation, treatment-response modeling, and APACE search are tested on synthetic/reference cases.", "The platform includes an exact small-instance oracle for the adaptive search logic; external clinical validation remains pending and clinician review is required."],
+    validation: ["Independently re-ran the full test suite in a clean virtual environment: 84 of 84 tests pass.", "Biomechanics, latent-state estimation, treatment-response modeling, and APACE search are tested on synthetic/reference cases.", "The platform includes an exact small-instance oracle for the adaptive search logic; external clinical validation remains pending and clinician review is required."],
     contribution: ["Integrated movement evidence, biomechanics, latent-state estimation, response modeling, and adaptive search into one workflow.", "Designed the APACE dual-control framing so intervention value includes both recovery and information gain.", "Added clinician-review and safety-envelope boundaries to keep the system decision-support oriented."],
     limitations: ["Synthetic patient scenarios do not establish clinical efficacy.", "The platform is not clinically validated and must not be used for autonomous care.", "External rehabilitation data, device validation, and clinician workflow validation remain open."],
     nextUpdates: ["Add public-safe movement visualizations and a reproducible benchmark summary.", "Clarify the specific research contribution from approved study materials.", "Keep clinical claims gated on external validation and clinician review."]
@@ -140,10 +140,11 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "17", label: "real charging sites analyzed", confidence: "Reported" },
       { value: "994", label: "real EV corridor segments aligned", confidence: "Reported" },
       { value: "1,189", label: "public EV variants used in scenario analysis", confidence: "Reported" },
-      { value: "442", label: "documented module tests across the stack", confidence: "Reported" },
+      { value: "48/49", label: "Go + Python tests independently re-run and passing", confidence: "Verified" },
+      { value: "~261", label: "further Julia module tests documented in-repo, not independently re-run", confidence: "Reported" },
       { value: "100%", label: "DQN success in the paired real-site result", confidence: "Reported" }
     ],
-    validation: ["The multi-module stack has completed its documented phase roadmap with tests across optimization, simulation, graph, routing, ML, and backend modules.", "In the documented paired real-site episode, the DQN policy reached 100% success with 6.111 h completion time; this is a modeled policy comparison, not a field trial.", "Real public sources are kept separate from modeled station-demand and queueing assumptions."],
+    validation: ["Independently re-ran the Go backend (15 tests) and Python ML module (34 tests) this session: 48 of 49 pass fresh, with the one failure traced to a local warehouse missing real corridor-site data rather than a confirmed code defect. The Julia optimization/simulation/routing/graph modules document roughly 261 further tests in-repo that were not independently re-run in this environment (blocked by a local Windows Application Control policy on compiled Julia packages, not a code issue).", "In the documented paired real-site episode, the DQN policy reached 100% success with 6.111 h completion time; this is a modeled policy comparison, not a field trial.", "Real public sources are kept separate from modeled station-demand and queueing assumptions."],
     contribution: ["Connected public station, corridor, vehicle, energy, weather, and utility sources into a network-analysis workflow.", "Built the queueing, routing, resilience, and optimization layers around station and corridor decisions.", "Separated observed infrastructure facts from modeled demand and policy comparisons."],
     limitations: ["Station-level demand is modeled because Tesla does not publish it at that granularity.", "The project is independent and not affiliated with Tesla.", "Live-model copilot tool selection, real demand forecasting, and some future planning layers remain open."],
     nextUpdates: ["Add the strongest network-map and queueing visuals.", "Freeze a compact comparison of route, queue, and storage decisions.", "Document the most defensible real-data result for recruiter review."]
@@ -248,25 +249,25 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
   },
 
   "circular-manufacturing": {
-    intro: "A circular-manufacturing decision system balancing cost, carbon, service feasibility, and material recovery through multi-objective mixed-integer optimization.",
-    decisionQuestion: "How should material flows and recovery choices be allocated when economic, environmental, and service objectives conflict?",
+    intro: "A closed-loop battery manufacturing and recovery decision platform (V1.2.1) connecting predictive AI, lifecycle accounting, reverse logistics, vehicle routing, and stochastic optimization into one auditable chain.",
+    context: "V1.2.1 does not stop at forecasting or dashboarding: predictions alter the engineering state, the engineering state constrains optimization, optimized policies are replayed across uncertain futures, and the final recommendation preserves its full computational ancestry.",
+    decisionQuestion: "Given uncertain future demand, scrap, returns, recovery quality, and material prices, what mix of virgin material, recovered feed, remanufacturing, recycling, inventory, collection routes, and facility capacity should be selected?",
     approach: [
-      { title: "Model flows", description: "Represent material balance, demand, recovery, capacity, and service constraints." },
-      { title: "Trade off objectives", description: "Optimize cost and carbon without hiding feasibility/service consequences." },
-      { title: "Solve", description: "Use Gurobi multi-objective MILP to produce feasible material-flow decisions." },
-      { title: "Validate", description: "Run a Windows final gate that records solver status, gap, feasibility, and objective outputs." }
+      { title: "Model flows", description: "Represent material balance, demand, recovery, capacity, and service constraints across the closed loop." },
+      { title: "Account", description: "Track lifecycle and carbon accounting alongside cost as first-class decision inputs, not an afterthought." },
+      { title: "Route", description: "Solve reverse-logistics collection and vehicle-routing decisions feeding the recovery network." },
+      { title: "Optimize", description: "Solve a multi-objective, stochastic Gurobi MILP under demand/return/yield uncertainty." },
+      { title: "Validate", description: "Run a Windows release gate recording solver status, gap, feasibility, and objective outputs, plus a full pytest suite." }
     ],
-    architecture: ["material / demand inputs", "flow + service constraints", "multi-objective MILP", "Gurobi solve", "cost / carbon / service outputs", "decision interface"],
+    architecture: ["material / demand inputs", "lifecycle + carbon accounting", "reverse logistics + routing", "multi-objective stochastic MILP", "Gurobi solve", "decision interface"],
     evidence: [
-      { value: "OPTIMAL", label: "recorded final solver status", confidence: "Verified" },
-      { value: "0.0", label: "MIP gap in the Phase 10 final gate", confidence: "Verified" },
-      { value: "~0.105 s", label: "recorded final-gate solver runtime", confidence: "Verified" },
-      { value: "~17.16M", label: "recorded cost objective in the validated scenario", confidence: "Verified" },
+      { value: "160/160", label: "tests passing in a fresh Python 3.14 install (V1.2.1)", confidence: "Verified" },
+      { value: "OPTIMAL", label: "recorded Gurobi solver status, zero MIP gap", confidence: "Reported" },
       { value: "120,000", label: "synthetic enterprise benchmark rows", confidence: "Reported" },
       { value: "EPA GHGRP 2023", label: "public facility extract included", confidence: "Reported" }
     ],
-    validation: ["Gurobi produced an optimal multi-objective solution with zero MIP gap.", "Service/shortage tolerances were explicitly checked; the enterprise-scale benchmark is synthetic and the public facility extract is kept separate from modeled results."],
-    contribution: ["Formulated the circular material-flow, recovery, service, carbon, and cost trade-offs as a multi-objective MILP.", "Built the solver-validation path around status, gap, feasibility, tolerances, and objective outputs.", "Kept synthetic enterprise scenarios separate from the public EPA facility extract."],
+    validation: ["Independently re-ran the full test suite in a clean Python 3.14 virtual environment: 160 of 160 tests pass, confirming V1.2.1 is genuinely current.", "The repository's own recorded Gurobi validation reports an optimal multi-objective solution with zero MIP gap; this specific figure comes from a checked-in evidence artifact, not a live Gurobi solve reproduced this session (no license available here).", "Service/shortage tolerances were explicitly checked; the enterprise-scale benchmark is synthetic and the public facility extract is kept separate from modeled results."],
+    contribution: ["Formulated the circular material-flow, recovery, lifecycle-accounting, reverse-logistics, and cost/carbon trade-offs as a multi-objective stochastic MILP.", "Built the solver-validation path around status, gap, feasibility, tolerances, and objective outputs.", "Kept synthetic enterprise scenarios separate from the public EPA facility extract."],
     limitations: ["Final launch should explain the realism and provenance of the material-flow inputs.", "The validated scenario is evidence of model correctness under that configuration, not a universal industrial benchmark."],
     nextUpdates: ["Add the strongest available UI screenshots.", "Add a compact formulation and objective-trade-off visualization.", "Refresh results if new data or assumptions change the model." ]
   },
