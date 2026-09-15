@@ -131,7 +131,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "FastAPI", "Optimization + simulation stack"],
     aiData: ["Forecasting", "Classification", "AI decision support", "Hybrid simulation data"],
     strongestEvidence: { value: "R² 0.839", label: "blocked-arrival forecasting", confidence: "Reported" },
-    currentState: "Core hospital-flow, forecasting, regime-detection, scenario, and decision-support workflows are implemented; reproducibility review remains ongoing."
+    currentState: "Core hospital-flow, forecasting, regime-detection, scenario, and decision-support workflows are implemented; independently verified with a full test-suite run (166/166 passing) in a clean install."
   },
   {
     title: "Supply-Chain Vulnerability Intelligence Platform",
@@ -251,7 +251,7 @@ export const projects: ProjectRecord[] = [
     techStack: ["Python", "Streamlit", "Optimization stack"],
     aiData: ["Public financial data", "Research-memory loop", "LLM-assisted analytics"],
     strongestEvidence: { value: "1,260", label: "public market rows in the evidence bundle", confidence: "Verified" },
-    currentState: "Implemented research workstation with 1,260 public market rows and six public evidence sources; production use is intentionally outside the current scope."
+    currentState: "Implemented research workstation with 1,260 public market rows and six public evidence sources; independently verified with a full test-suite run (18/18 passing) in a clean install. Production use is intentionally outside the current scope."
   },
   {
     title: "Manufacturing Quality Intelligence Platform",

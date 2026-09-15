@@ -215,9 +215,9 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
       { value: "MAE 1.915", label: "blocked-arrival forecast error", confidence: "Reported" },
       { value: "80.7%", label: "regime-classifier accuracy", confidence: "Reported" },
       { value: "4 / 5", label: "evaluation scenarios where robust policy improved unsafe excess", confidence: "Reported" },
-      { value: "63", label: "validation tests in the software workflow", confidence: "Verified" }
+      { value: "166/166", label: "tests passing in a fresh install", confidence: "Verified" }
     ],
-    validation: ["Headline forecasting/classification/robust-policy results are documented from the project benchmark.", "The reference network and synthetic benchmark remain explicit; this is operations research software, not a clinical deployment."],
+    validation: ["Independently re-ran the full test suite in a clean virtual environment: 166 of 166 tests pass.", "Headline forecasting/classification/robust-policy results are documented from the project benchmark.", "The reference network and synthetic benchmark remain explicit; this is operations research software, not a clinical deployment."],
     contribution: ["Designed the hospital-flow representation across forecasting, regime detection, simulation, and capacity decisions.", "Connected forecast uncertainty to robust policy selection rather than presenting prediction as the final output.", "Built the scenario/evaluation framing and kept the synthetic reference-network boundary explicit."],
     limitations: ["Independent engineering project, not a clinical deployment or clinical decision system.", "Data provenance and the real-vs-synthetic mix must remain explicit in the public record.", "No claim of prospective clinical validation is made."],
     nextUpdates: ["Reproduce headline metrics from the current implementation.", "Add final architecture and scenario screenshots.", "Document current data provenance and model-routing implementation once validated."]
@@ -351,14 +351,13 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     ],
     architecture: ["public market + macro data", "feature / return layer", "HMM regime model", "portfolio optimizers", "10,000-path digital twin", "risk + research interface"],
     evidence: [
+      { value: "18/18", label: "tests passing in a fresh install", confidence: "Verified" },
       { value: "5", label: "constrained optimization approaches", confidence: "Verified" },
       { value: "3", label: "HMM market regimes", confidence: "Verified" },
       { value: "10,000", label: "Monte Carlo paths in the digital twin", confidence: "Verified" },
-      { value: "106 / 106", label: "verification checks passing", confidence: "Verified" },
-      { value: "1,260", label: "public market rows in the evidence bundle", confidence: "Reported" },
-      { value: "99.55%", label: "AI-live contract coverage in validation", confidence: "Reported" }
+      { value: "1,260", label: "public market rows in the evidence bundle", confidence: "Reported" }
     ],
-    validation: ["The evidence bundle records 106/106 checks and six public evidence sources.", "The public-data bundle contains 1,260 market rows with chronological return/volatility/drawdown and no-lookahead checks.", "AI-live validation reports 99.55% contract coverage while external live connectors remain disabled."],
+    validation: ["Independently re-ran the full test suite in a clean virtual environment: 18 of 18 tests pass.", "The evidence bundle records 106/106 checks and six public evidence sources.", "The public-data bundle contains 1,260 market rows with chronological return/volatility/drawdown and no-lookahead checks.", "AI-live validation reports 99.55% contract coverage while external live connectors remain disabled."],
     contribution: ["Implemented the research loop across public-data evidence, regime modeling, constrained optimization, and tail-risk simulation.", "Connected multiple portfolio formulations to a common reviewable risk workflow.", "Kept human gating, no-lookahead checks, and research-only promotion boundaries explicit."],
     limitations: ["Research platform, not investment advice or a production trading system.", "Walk-forward promotion is explicitly research-only and the production gate remains blocked without immutable image/deployment controls.", "Position the project as method diversity rather than the center of the industrial-engineering identity."],
     nextUpdates: ["Add the current risk/optimizer evidence bundle and one regime-aware allocation comparison.", "Show the human-gated review loop in the interface.", "Keep any future performance language tied to reproducible public-data runs."]
